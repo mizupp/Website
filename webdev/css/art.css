@@ -1,0 +1,424 @@
+ 
+/*This selector will apply the css to all the classes on the page;
+ to everything*/
+ * {
+     box-sizing: border-box;
+}
+/*ART PAGE CSS*/
+/*ART PAGE SLIDESHOW*/
+/* Position the image container (needed to position the left and right arrows) */
+/*This is the art container;
+ it has a pink background*/
+ .artcontainer {
+     position: relative;
+     background: #ffc0cb;
+}
+/*This class hides the slides by default;
+ that way not all the images will show up at the same time on the page */
+ .mySlides {
+     display: none;
+}
+/* This is for the numbers which are on the container;
+ it has been styled to suit the theme of the website. */
+ .numbertext {
+     color: black;
+     font-size: 30px;
+     padding: 8px 12px;
+     position: absolute;
+     left: 0px;
+     font-weight: bold;
+     font-family: 'butlerblackstencil';
+     text-shadow: 2px 2px 1px #f990a7;
+}
+/*This is for the captions that are displayed towards the top of the container;
+ i gave this a top of 10% to allow it to come down a little since positioning it as absolute on the container means I can place it according to how I want.*/
+ .captions {
+     color: black;
+     padding: 10px 10%;
+     position: absolute;
+     right: 0px;
+     top: 10%;
+     font-size: 100px;
+     font-weight: bold;
+     font-family: 'butlerblackstencil';
+     text-shadow: 2px 2px 1px #f990a7;
+}
+/*MEDIA QUERIES FOR CAPTIONS*/
+/*To adjust the font size as the screen width changes*/
+ @media only screen and (max-width: 900px) {
+     .captions {
+         font-size: 80px;
+    }
+}
+ @media only screen and (max-width: 700px) {
+     .captions {
+         padding: 10px 5%;
+         font-size: 50px;
+    }
+}
+ @media only screen and (max-width: 700px) {
+     .captions {
+         padding: 10px 2%;
+         font-size: 40px;
+    }
+}
+/* This adds a pointer cursor when the user is hovering over the small preview thumbnail images */
+ .artcursor {
+     cursor: pointer;
+}
+/* This is for the styling of the next and before/previous buttons;
+ they have a top of 40% to place them at desired area - having 50% was too low for my liking. It has a adding to keep it slightly away from the sides of the container. Having user select to none means there will be no text selection. */
+ .prev, .next {
+     cursor: pointer;
+     position: absolute;
+     top: 40%;
+     width: auto;
+     padding: 16px;
+     margin-top: -50px;
+     font-weight: bold;
+     font-size: 50px;
+     color: #ffc0cb;
+     user-select: none;
+     -webkit-user-select: none;
+}
+/* Allows the positioning of the "next" button to be towards the right of the container */
+ .next {
+     right: 0;
+     border-radius: 3px 0 0 3px;
+}
+/* When you hover over the next and previous button, it should smoothly transition into a pink colour.*/
+ .prev:hover, .next:hover {
+     color: #f990a7;
+     transition: 0.6s;
+}
+/*This is to give a bit of space for the thumbnail images.*/
+ .artrow:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+/* This is for the little preview thumbnail images;
+ they have a width of 25% to ensure that all 4 of the images I am using for the slideshow fit the width of the page. They float left since I want them to be in a row. */
+ .artcolumn {
+     float: left;
+     width: 25%;
+}
+/* Some styling for the thumbnail images;
+ they have a low opacity so that they can get a pink tint from the background colour. */
+ .artdemo {
+     opacity: 0.5;
+     border-top : solid 1px black;
+     border-bottom : solid 1px black;
+     border-left : solid 1px black;
+     border-right : solid 1px black;
+}
+/*When you hover over the thumbnails, the image opacity changes to 1 smoothly so you can preview it more clearly.*/
+ .active, .artdemo:hover {
+     opacity: 1;
+     transition: 0.6s;
+}
+/*The image width has to be 100% to the div it is within otherwise it will grow to its usual large size.*/
+ .artimgwidth{
+     width:100%;
+}
+/*This is for the showcase of portfolio;
+ it has a width of 100% so I am using all the space within the art container.*/
+ .artmain{
+     width: 100%;
+     position: relative;
+     padding-top: 20px;
+     background: rgba(255,0,0,0.1);
+}
+/*The art heading has been styled appropriately, I went for the bold typography fonts (same ones as used on homepage).*/
+ .artheading{
+     font-size: 80px;
+     text-align: center;
+     line-height: 100px;
+     font-weight: bold;
+     font-family: 'butlerblackstencil';
+     text-shadow: 2px 2px 1px #f990a7;
+     border-top : solid 1px black;
+     border-bottom : solid 1px black;
+}
+/*MEDIA QUERIES FOR THE ART HEADING */
+/*These are to change the font size of the art headings and line height according to the screen width.*/
+ @media screen and (max-width: 1024px) {
+     .artheading{
+        font-size: 60px;
+    }
+}
+ @media screen and (max-width: 900px) {
+     .artheading{
+        font-size: 50px;
+    }
+}
+ @media screen and (max-width: 768px) {
+     .artheading{
+        line-height: 90px;
+        font-size: 35px;
+    }
+}
+ @media screen and (max-width: 600px) {
+     .artheading{
+        line-height: 90px;
+        font-size: 25px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .artheading{
+        line-height: 70px;
+        font-size: 25px !important;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .artheading{
+        line-height: 50px;
+        font-size: 18px !important;
+    }
+}
+/*END OF ART PAGE SLIDESHOW*/
+/*ART PAGE GRID IMAGES*/
+/*These the images that are going to be used on the grid*/
+ .artgridimage-1 {
+     background-image: url(../images/feelings1.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-2 {
+     background-image: url(../images/feelings2.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-3 {
+     background-image: url(../images/feelings3.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-4 {
+     background-image: url(../images/feelings4.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-5 {
+     background-image: url(../images/feelings5.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-6 {
+     background-image: url(../images/feelings6.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-7 {
+     background-image: url(../images/feelings7.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-8 {
+     background-image: url(../images/feelings8.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-9 {
+     background-image: url(../images/levi.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+ .artgridimage-10 {
+     background-image: url(../images/hidden.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+}
+/*ART PAGE GRID CSS*/
+/*Allow the width to be 100% so we are using all the space;
+ the text align is center so that the grid stays in the center of the page.*/
+ .artgridarea {
+     margin: 10px 0 0 0;
+     padding: 0;
+     list-style: none;
+     display: block;
+     text-align: center;
+     width: 100%;
+}
+/*Since it is a grid, we need to display as table*/
+ .artgridarea:after, .gridobject:before {
+     content: '';
+     display: table;
+}
+ .artgridarea:after {
+     clear: both;
+}
+/*Each grid card will have a width of 630px and height of 350px;
+ these all have a margin of 20px so they aren't joined together;
+ inline block helps to keep it in the centerk*/
+ .artgridarea li {
+     width: 630px;
+     height: 350px;
+     display: inline-block;
+     margin: 20px;
+}
+/*END OF ART PAGE GRID STRUCTURE*/
+/*ART PAGE GRID STYLE CSS*/
+/*For the grid styling, we are using transition hover over effects. This is achieved through box shadows*/
+ .gridobject {
+     width: 100%;
+     height: 100%;
+     border-radius: 0%;
+     position: relative;
+     cursor: default;
+     box-shadow: inset 0 0 0 0 rgba(190,0,0, 0.4), inset 0 0 0 16px rgba(180,0,0,0.4), 0 1px 2px rgba(80,0,0,0.1);
+     -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+     -o-transition: all 0.4s ease-in-out;
+     -ms-transition: all 0.4s ease-in-out;
+     transition: all 0.4s ease-in-out;
+}
+/*When you hover over, the box shadow changes colour and size hence why it is able to cover the entire image card.*/
+ .gridobject:hover {
+     box-shadow: inset 0px 0px 0px 200px rgba(50,0,0, 0.4), inset 0 0 0 16px rgba(255,255,255,0.8), 3px 3px 5px 1px rgba(255,0,0,0.1);
+}
+/*The informaton need to be in the middle of the page hence why it is given height and width of 100%. The positon is absolute so it will stay on top of the card. It has an opacity of one since I don't want it showing until upon hover.*/
+ .artgridinfo {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 30%;
+     opacity: 0;
+     -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+     -o-transition: all 0.4s ease-in-out;
+     -ms-transition: all 0.4s ease-in-out;
+     transition: all 0.4s ease-in-out;
+     -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+     -o-transform: scale(0);
+     -ms-transform: scale(0);
+     transform: scale(0);
+     -webkit-backface-visibility: hidden;
+    /*this is for smoother font */
+}
+/*Upon hover the opacity of my text/information that is within the box is not previewable. It transform to a scale of 0.8 from 0.*/
+ .gridobject:hover .artgridinfo {
+     opacity: 1;
+     -webkit-transform: scale(0.8);
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -ms-transform: scale(0.8);
+     transform: scale(0.8);
+}
+/*This is for styling of the h3 tag within the artgrid information;
+ each card will have the same text styling;
+*/
+ .artgridinfo h3 {
+     color: #fff;
+     text-transform: uppercase;
+     position: relative;
+     letter-spacing: 2px;
+     font-size: 22px;
+     margin: 15px 30px;
+     padding: 65px 0 0 0;
+     height: 110px;
+     font-family: 'chivo-bold';
+     text-shadow: 2px 1px 1px black;
+}
+/*This is for styling of the p tag within the artgrid information;
+ each card will have the same text styling;
+*/
+ .artgridinfo p {
+     color: black;
+     padding: 10px 5px;
+     font-style: italic;
+     margin: 0 30px;
+     font-size: 22px;
+     border-top: 1px solid rgba(255,255,255,0.5);
+     border-bottom: 1px solid rgba(255,255,255,0.5);
+     font-family: 'butlerblack';
+     text-shadow: 1px 1px 1px #f990a7;
+}
+/*This is the colour of the small link text at the bottom of the card;
+ it has been styled to suit layout of the page */
+ .artgridinfo p a {
+     display: block;
+     color: white;
+     color: rgba(255,255,255,0.7);
+     font-style: normal;
+     font-weight: 700;
+     text-transform: uppercase;
+     font-size: 14px;
+     letter-spacing: 1px;
+     padding-top: 4px;
+     font-family: 'chivo-regular';
+     text-shadow: none;
+}
+/*upon hover, the text changes from white to pink smoothly with transition*/
+ .artgridinfo p a:hover {
+     color: #f990a7;
+     color: rgba(255,55,100,0.5);
+     transition: 0.6s;
+}
+/*MEDIA QUERIES FOR GRID*/
+/*These are to change the paddings and font sizes when the screen width decreases.*/
+ @media only screen and (max-width: 900px) {
+     .artgridarea li {
+        width: 500px;
+        height: 300px;
+        display: inline-block;
+        margin: 20px;
+    }
+     .artgridinfo h3 {
+        font-size: 20px;
+        margin: 5px 30px;
+    }
+     .artgridinfo p {
+        padding: 10px 5px;
+        font-size: 20px;
+    }
+}
+ @media only screen and (max-width: 700px) {
+     .artgridarea li {
+        width: 400px;
+        height: 230px;
+        display: inline-block;
+    }
+     .artgridinfo h3 {
+        font-size: 18px;
+        margin: 0px 30px;
+    }
+     .artgridinfo p {
+        padding: 0px 30px;
+        font-size: 18px;
+    }
+     .artgridinfo p a {
+        font-size: 11px;
+    }
+}
+ @media only screen and (max-width: 500px) {
+     .artgridarea li {
+        width: 300px;
+        height: 150px;
+        margin: 10px;
+    }
+     .artgridinfo h3 {
+        font-size: 15px;
+        margin: 0px 30px;
+    }
+     .artgridinfo p {
+        position: relative;
+        padding: 0px 0px;
+        font-size: 12px;
+         bottom: 22px;
+    }
+     .artgridinfo p a {
+        font-size: 10px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .artgridarea li {
+        width: 275px;
+        height: 150px;
+        margin: 10px;
+    }
+}
+/*END OF ART PAGE GRID STYLING CSS*/
+/*END OF ART PAGE*/
+ 

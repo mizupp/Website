@@ -1,0 +1,285 @@
+@font-face {
+    font-family: 'molotregular';
+    src: url('fonts/molot-webfont.woff2') format('woff2'),
+         url('fonts/molot-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'megalopolis_extraregular';
+    src: url('fonts/megalopolisextra-regular-webfont.woff2') format('woff2'),
+         url('fonts/megalopolisextra-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'monoalphabetregular';
+    src: url('fonts/monoalphabet-webfont.woff2') format('woff2'),
+         url('fonts/monoalphabet-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'butlerblack';
+    src: url('fonts/butler_black-webfont.woff2') format('woff2'),
+         url('fonts/butler_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlerblackstencil';
+    src: url('fonts/butler_black_stencil-webfont.woff2') format('woff2'),
+         url('fonts/butler_black_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butler_light';
+    src: url('fonts/butler_light-webfont.woff2') format('woff2'),
+         url('fonts/butler_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'chivo-bold';
+    src: url('fonts/chivo-bold-webfont.woff2') format('woff2'),
+         url('fonts/chivo-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+	height:100%;
+}
+
+
+body {
+	width: 100%;
+    overflow: hidden;
+	background-color: #fff;
+	background-image: url(../images/feelings7.png);
+	background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: 'butlerblack';
+
+}
+
+.middle {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	
+}
+
+.fixingmiddle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+}
+
+.insidemiddle {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	letter-spacing: -15px;
+	line-height: 120px;
+	font-size: 120%;
+
+}
+
+.middle h2 {
+	color: black;
+	margin: 20px auto;
+    font-size: 10em;
+	padding: 0.3em 0.6em;
+	width: auto;
+	height: auto;
+    text-shadow: 10px 1px white;
+	
+}
+
+h2::first-letter {
+	
+    font-size: 160%;
+    color: #f990a7;    
+	text-shadow: 10px 1px black;
+	font-style: italic;
+
+}
+
+
+.ajourney {
+    position: relative;
+    width: 2em;
+    margin: 20px auto;
+    border-right: 2px solid rgba(0,0,0,.75);
+    font-size: 150%;
+	letter-spacing: 1px;
+    text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #f990a7;
+	text-decoration: none;
+    font-family: 'chivo-bold';
+    text-shadow: 2px 2px black;
+
+}
+
+.ajourney:hover{
+	color: black;
+    text-shadow: 2px 2px #f990a7;
+    transition: all 300ms linear 0s;
+}
+
+.textanimation{
+animation: writer 1s steps(20) 3s 1 normal both,
+            blinking 400ms steps(30) infinite normal;
+}
+@keyframes writer{
+  from{
+	  width: 0;
+	}
+  to{
+	  width: 10em;
+	}
+}
+@keyframes blinking{
+  from{border-right-color: rgba(210,0,0,0.2);}
+  to{border-right-color: transparent;}
+}
+
+
+@keyframes implode {
+  100% {transform: scale(0)}
+}
+
+
+@media screen and (max-width: 1024px) {
+	.insidemiddle{font-size: 100%;}
+	h2::first-letter{font-size: 140%;}
+}
+	
+
+@media screen and (max-width: 768px) {
+	.middle h2{font-size: 9em;}
+	.insidemiddle{font-size: 80%;}
+	h2::first-letter{font-size: 130%;}
+}
+
+
+@media screen and (max-width: 426px) {
+	.middle h2{font-size: 8em;}
+	.insidemiddle{font-size: 60%;}
+	h2::first-letter{font-size: 110%;}
+}
+
+@media screen and (max-width: 376px) {
+	.middle h2{font-size: 6em; letter-spacing: 3px;}
+	.middle h2 {text-shadow: 5px 1px white;}
+	h2::first-letter{font-size: 110%;letter-spacing: 3px;text-shadow: 1px 1px black;}
+}
+
+
+
+/*Shapes*/
+.triangles{
+	position: relative;
+	bottom: 400px;
+
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-top: 300px solid transparent;
+	border-left: 1550px solid black;
+	border-bottom: 550px solid transparent;
+}
+
+.triangle2 {
+	width: 0;
+	height: 0;
+	border-top: 300px solid transparent;
+	border-right: 650px solid black;
+	border-bottom: 550px solid transparent;
+	float: right;
+	
+}
+
+.shapes {
+	
+  border: solid black;
+  padding: 15px;
+/*  border-image: url(../images/feelings2.png) 40 round;*/
+  border-width: 40px 3px 40px 200px;
+  display: inline-block;
+  padding: 300px 300px;
+  float: left;
+	
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+	
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+	
+}
+
+
+#wrapink {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#wrapink p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-20%) translateY(-10%);
+  color: rgba(255,255,255,.5);
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.ink {
+/*  pointer-events: none;*/
+  position: absolute; 
+  width: 100px;
+  height: 100px;
+    border-radius: 50%;
+  animation: implode 3s ease-in-out;
+  animation-fill-mode: both;
+  opacity: 0.2;
+}
+

@@ -1,0 +1,373 @@
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mizna portfolio">
+	<meta name="keywords" content="Mizna,Portfolio,Art">
+	<meta name="author" content="Mizna Uppal">
+
+		<title>Mizna Uppal</title>
+ <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">       
+        
+      
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/fading.js"></script>
+		
+<link id="lightstyle" rel="stylesheet" type="text/css" href="css/mainstyle.css">
+<link rel="stylesheet" type="text/css" href="css/art.css" />
+			
+	</head>
+<body>
+
+<!--This div contains the artcontainer and fadingmiznapages classes. artcontainer allows everything within the div to have a position of relative postion; it also makes the background pink. This container contains the main big slideshow. The "fadingmiznapages" class is required for fading.js-->
+<div class="artcontainer fadingmiznapages">
+<!--For this page, I have put the the navigation in the artcontainer. This is because I need to be able to preview the menu bar and click on it, if it wasn't in this div, it would either disappear behind the slideshow or you wouldn't be able to click on it.-->
+
+
+<!-- NAVIGATION (SIDE MENU) -->
+
+	<div class = "menu">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+	<a href="index.html">Splash Page</a>
+	<a href="index2.html">Home</a>
+    <a href="art.html">Art</a>	
+	<a href="charity.html">Charity</a>
+	<a href="chapters.html">Chapters</a>
+	</div>
+</div>
+<!--	TO OPEN SIDE MENU	-->
+<span class ="navopen" onclick="openNav()">&#9776; </span>
+	</div>
+
+<!--END OF HEADER	-->
+<!--This div is here to ensure that the little preview images get a pink tint background; it doesn't have any styling but it keeps the slides together with the container.	-->
+<div>
+<!--This div is to give slides a display of none; this keeps them hidden by default-->
+	<div class="mySlides">
+<!--div contains the number that the slide is on; since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+		<div class="numbertext">1 / 4</div>
+<!--div contains the caption on the side; I decided to go for a slightly bigger font in my styling. The caption is placed toward the top of the screen rather than the bottom; I did this because I didn't want it take attention away from the little preview buttons. Since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+			<div class="captions">"Bruised"</div>
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+				<img src="images/feelings1.png" alt="bruised" style="width:100%">
+	  </div>
+<!--END OF FIRST SLIDE-->
+	
+
+<!--This div is to give slides a display of none; this keeps them hidden by default-->
+	<div class="mySlides">
+<!--div contains the number that the slide is on; since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+		<div class="numbertext">2 / 4</div>
+<!--div contains the caption on the side. Since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+			<div class="captions">"Butterflies"</div>
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+				<img src="images/feelings2.png" alt="butterflies" style="width:100%">
+  </div>
+<!--END OF SECOND SLIDE-->
+
+	
+<!--This div is to give slides a display of none; this keeps them hidden by default-->
+  <div class="mySlides">
+<!--div contains the number that the slide is on; since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+    <div class="numbertext">3 / 4</div>
+<!--div contains the caption on the side. Since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+		<div class="captions">"Concentration"</div>
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+			<img src="images/feelings3.png" alt="concentration" style="width:100%">
+  </div>
+<!--END OF THIRD SLIDE-->
+
+	
+<!--This div is to give slides a display of none; this keeps them hidden by default-->
+  <div class="mySlides">
+<!--div contains the number that the slide is on; since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+	  <div class="numbertext">4 / 4</div>
+<!--div contains the caption on the side. Since this is within "mySlides" div, it remains hidden until something triggers it to display-->
+		<div class="captions">"Waiting"</div>
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->	  
+			<img src="images/feelings6.png" alt="waiting" style="width:100%">
+  </div>
+<!--END OF FOURTH SLIDE-->
+
+<!--Links that appear on the slideshow, these allow us to toggle between the images. When you click on them, they execute the script which is written at the bottom of the page		--> 
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+<!--End of links part						-->
+		 </div>
+	
+<!--For the little preview images at the bottom of the slideshow-->
+<!--This div, keeps all the of the artcolumn grids together. After you have clicked on contents of artrow, it displays the table that was being hidden-->
+  <div class="artrow">
+<!--This div keeps the image together; it has been styled to move everything to the left. It has a grid width of 25% which allows it to stay responsive no matter what the width of the page. -->
+    <div class="artcolumn">
+<!--img tag used to put source the image I want shown. This has many classes that keep the pictures looking the same in terms of width. If the images are not the same height, the preview at the bottom can look a little unasthetic.-->
+      <img class="artdemo artcursor artimgwidth" src="images/feelings1.png" alt="bruised" onclick="currentSlide(1)">
+    </div>
+
+<!--Second preview image-->
+<!--This div keeps the image together; it has been styled to move everything to the left. It has a grid width of 25% which allows it to stay responsive no matter what the width of the page. -->
+    <div class="artcolumn">
+<!--img tag used to put source the image I want shown.-->
+      <img class="artdemo artcursor artimgwidth" src="images/feelings2.png" alt="butterflies"onclick="currentSlide(2)">
+    </div>
+	  
+<!--Third preview image-->
+<!--This div keeps the image together; it has been styled to move everything to the left. It has a grid width of 25% which allows it to stay responsive no matter what the width of the page. -->
+    <div class="artcolumn">
+<!--img tag used to put source the image I want shown.-->
+      <img class="artdemo artcursor artimgwidth" src="images/feelings3.png" alt="concentration" onclick="currentSlide(3)">
+    </div>
+	  
+<!--Fourth preview image-->
+<!--This div keeps the image together; it has been styled to move everything to the left. It has a grid width of 25% which allows it to stay responsive no matter what the width of the page. -->
+    <div class="artcolumn">
+<!--img tag used to put source the image I want shown.-->
+      <img class="artdemo artcursor artimgwidth" src="images/feelings6.png" alt="waiting" onclick="currentSlide(4)">
+    </div>
+  </div>
+</div>
+<!--This div is to ensure that I am using the entire width of container; this is important since I need the image grid to be responsive.-->
+	   <div class="artmain">
+<!--This div contains the header for my art collection images. All the style has been added to the artheading class-->
+				<div class = "artheading">
+					<h1>"FEELINGS COLLECTION"</h1>
+				</div>
+<!--The first image gallery part begin from here; it has been seperated out with use of section tag.-->
+		   <section class="grid">
+<!--This is to be used on each image card; the grid area allows the image to have a full width and margin so that it can have a small distance from other cards. Since we are working with ul and li tags, I would get rid of any list-styles. -->
+				<ul class="artgridarea">
+<!--This will contain the first image-->
+					<li>
+<!--This is used to make sure that the image has a height and width of 100%; I wanted it to be a square hence why it doesn't have a border radius. The div is given a background with the use of "artgridimage". For the images below (the second, third etc images) they have different classes since they will be needing different backgrounds.-->
+						<div class="gridobject artgridimage-1">
+<!--This is the div that will contain all the text and information regarding the image along with a small link that leads to the preview of a larger image.-->
+							<div class="artgridinfo">
+<!--This has been styled accordingly; the h3 header within artgridinfo is constant for every image card.-->
+								<h3>"Bruised"</h3>
+<!--Paragraph tag used which also has a link inside it. Upon clicking on this link, it opens up a larger preview of the image from within the folder-->
+								<p>by Mizna Uppal<a href="images/feelings1.png">Enlarge Bruised</a></p>
+							</div>
+						</div>
+					</li>
+<!--This will contain the second image-->
+
+					<li>
+						<div class="gridobject artgridimage-2">
+							<div class="artgridinfo">
+								<h3>"Butterflies"</h3>
+<!--For this particular example, I am not using the image from the file for the larger preview, this is because I had originally cut images I needed for my slideshow to size consistently. I would prefer if the users were to see the original file which is accessible from online.-->
+								<p>by Mizna Uppal<a href="https://orig00.deviantart.net/ccb8/f/2017/353/1/1/butterflies___feelings_collection_by_mizarts-dbx7ctl.png">Enlarge Butterflies</a></p>
+							</div>
+						</div>
+					</li>
+<!--This will contain the third image-->
+
+					<li>
+						<div class="gridobject artgridimage-3">
+							<div class="artgridinfo">
+								<h3>"Concentration"</h3>
+<!--For this particular example, I am not using the image from the file for the larger preview, this is because I had originally cut images I needed for my slideshow to size consistently. I would prefer if the users were to see the original file which is accessible from online.-->
+								<p>by Mizna Uppal<a href="https://orig00.deviantart.net/5640/f/2017/353/8/6/concentration___feelings_collection_by_mizarts-dbx7gwu.png">Enlarge Concentration</a></p>
+							</div>
+						</div>
+					</li>
+<!--This will contain the fourth image-->
+
+				      <li>
+						<div class="gridobject artgridimage-4">
+							<div class="artgridinfo">
+								<h3>"Innocent"</h3>
+								<p>by Mizna Uppal<a href="images/feelings4.png">Enlarge Innocent</a></p>
+							</div>
+						</div>
+					</li>
+<!--This will contain the fifth image-->
+
+					    <li>
+						<div class="gridobject artgridimage-5">
+							<div class="artgridinfo">
+								<h3>"Stare"</h3>
+								<p>by Mizna Uppal<a href="images/feelings5.png">Enlarge Stare</a></p>
+							</div>
+						</div>
+					</li>
+<!--This will contain the sixth image-->
+
+					   <li>
+						<div class="gridobject artgridimage-6">
+							<div class="artgridinfo">
+								<h3>"Waiting"</h3>
+<!--For this particular example, I am not using the image from the file for the larger preview, this is because I had originally cut images I needed for my slideshow to size consistently. I would prefer if the users were to see the original file which is accessible from online.-->
+								<p>by Mizna Uppal<a href="https://orig00.deviantart.net/ca18/f/2017/354/6/f/waiting__feelings_collection_by_mizarts-dbxaaq2.png">Enlarge Waiting</a></p>
+							</div>
+						</div>
+					</li>
+<!--This will contain the seventh image-->
+
+						 <li>
+						<div class="gridobject artgridimage-7">
+							<div class="artgridinfo">
+								<h3>"Free"</h3>
+								<p>by Mizna Uppal<a href="images/feelings7.png">Enlarge Free</a></p>
+							</div>
+						</div>
+					</li>
+<!--This will contain the eighth image-->
+
+					 <li>
+						<div class="gridobject artgridimage-8">
+							<div class="artgridinfo">
+								<h3>"Tired"</h3>
+								<p>by Mizna Uppal<a href="images/feelings8.png">Enlarge Tired</a></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+<!--END OF THIS COLLECTION OF IMAGES-->
+			</section>
+<!--END OF GRID SECTION		   -->
+		   			
+<!--This div contains the header for my art collection images. All the style has been added to the artheading class. This class used on this div has been used for the other heading as well.-->
+		   <div class = "artheading">
+					<h1>"EXTRAS"</h1>
+				</div>
+		   
+		   
+<!--The second image gallery part begin from here; it has been seperated out with use of section tag.-->
+<!--Another section which is using the same grid class. We are now creating another small grid to display different art pieces-->
+		    <section class="grid">
+<!--This is to be used on each image card; the grid area allows the image to have a full width and margin so that it can have a small distance from other cards. Since we are working with ul and li tags, I would get rid of any list-styles. -->
+				<ul class="artgridarea">
+<!--This will contain the first image-->
+					<li>
+<!--This is used to make sure that the image has a height and width of 100%; I wanted it to be a square hence why it doesn't have a border radius. The div is given a background with the use of "artgridimage". For the images below (the second, third etc images) they have different classes since they will be needing different backgrounds.-->
+						<div class="gridobject artgridimage-9">
+<!--This is the div that will contain all the text and information regarding the image along with a small link that leads to the preview of a larger image.-->
+							<div class="artgridinfo">
+<!--This has been styled accordingly; the h3 header within artgridinfo is constant for every image card.-->
+								<h3>"Levi Ackerman"</h3>
+<!--For this particular example, I am not using the image from the file for the larger preview, this is because I had originally cut images I needed for my slideshow to size consistently. I would prefer if the users were to see the original file which is accessible from online.-->
+
+								<p>by Mizna Uppal<a href="https://orig00.deviantart.net/7ce5/f/2017/312/2/4/levi_ackerman__power_by_mizarts-dbspyo9.png">Enlarge Levi</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gridobject artgridimage-10">
+							<div class="artgridinfo">
+								<h3>"The Hidden Ones"</h3>
+<!--For this particular example, I am not using the image from the file for the larger preview, this is because I had originally cut images I needed for my slideshow to size consistently. I would prefer if the users were to see the original file which is accessible from online.-->
+								<p>by Mizna Uppal<a href="https://orig00.deviantart.net/2548/f/2017/312/7/2/the_hidden_ones_by_mizarts-dbt41wb.png">Enlarge Hidden</a></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+		   </section>
+<!--END OF THIS COLLECTION OF IMAGES-->
+	</div>
+<!--END OF ARTMAIN-->
+	
+	
+<!--This script is written in js.
+
+We getting the elements that have the class of "mySlides" within the html code and then making it into our variable of "slides". The "dots" are the little preview image thumbnail buttons at the bottom of the slideshow.
+
+The original code had "captionTexts" as well which were supposed to be at the bottom of the slideshow; these were also linked the "alt" of the images however I got rid of that since I didn't need it for my code. Instead I made my own caption divs and put those onto the slideshow rather than having them under the slideshow.
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+
+This code is to make sure that the images show up in the slideshow since without it, the images would appear enlarged underneath the slideshow container.
+
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+There is a for loop which iterates through the length of dots; this is to make sure that after the little thumbnails have been clicked, they return back to their style from their class.
+
+
+
+The slides style is blocked when slidesIndex is no longer one and if that is the case then the dots become "active"; allowing the event to be triggered; so now we will be able to see the images.
+-->
+<script type="text/javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+	
+  var dots = document.getElementsByClassName("artdemo");
+	
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+		
+</script>
+	
+<!-- The following script is using standard javascript. 
+
+document.getElementById("myNav").style.width = "100%";
+
+At the top when we click on the "span link" (which is the navbar), it activates this script. The script then tries to find where the "myNav" id is being used. It applies the styles of classes with the div of this id, 100% fully across the page.
+	
+document.getElementById("myNav").style.width = "0%";
+
+When the navbar is open, we need to close it as well; there is a little cross at the top of the page. When you click it, it brings the style to 0% width therefore we no longer see it on the page.
+
+-->	
+<script type="text/javascript">
+function openNav() {
+document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+document.getElementById("myNav").style.width = "0%";
+}
+</script>
+        
+    </body>
+	
+<footer>
+<!--Container for the footer; keeps the footer together so I can style the entire footer-->
+	<div class = "footercontainer">
+<!--div for copyright; is styled seperately to the div below within the same container-->
+  <div class="copyright">
+    <p>Mizna Uppal © 2017</p>
+  </div>
+<!--END OF COPYRIGHT DIV-->
+<!--This container div contains all the link placed in the footer bar-->
+  <div class="footerlinkscontainer">
+		<a href="index.html" class = "footerlinks">SplashPage</a>
+		<a href="index2.html" class = "footerlinks">Home</a>
+		<a href="art.html" class = "footerlinks">Art</a>
+		<a href="chapters.html" class = "footerlinks">Chapters</a>
+	  	<a href="charity.html" class = "footerlinks">Charity</a>
+  </div>
+<!--END OF FOOTERLINKSCONTAINER-->
+		</div>
+<!--END OF FOOTERCONTAINER-->
+</footer>
+<!--END OF FOOTER-->
+	
+</html>	

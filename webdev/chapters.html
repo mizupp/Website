@@ -1,0 +1,376 @@
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mizna portfolio">
+	<meta name="keywords" content="Mizna,Portfolio,Art">
+	<meta name="author" content="Mizna Uppal">
+
+		<title>Mizna Uppal</title>
+ <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">       
+        
+      
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/fading.js"></script>
+		
+<link id="lightstyle" rel="stylesheet" type="text/css" href="css/mainstyle.css">
+<link id="darkstyle" rel="stylesheet" type="text/css" href="css/mainstyle.css">	
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+        
+</head>
+	
+
+	
+<body>
+
+<!--this div is to give the page a background; I have not use a box wrap hence why the background is spread across the page; there is still margin on the body.-->
+<div class = "chaptersbackground">
+<!--		HEADER OF PAGE -->
+<div class="top">
+<!-- NAVIGATION (SIDE MENU) -->
+
+	<div class = "menu">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+	<a href="index.html">Splash Page</a>
+	<a href="index2.html">Home</a>
+    <a href="art.html">Art</a>	
+	<a href="charity.html">Charity</a>
+	<a href="chapters.html">Chapters</a>
+	</div>
+</div>
+<!--	TO OPEN SIDE MENU	-->
+<span class ="navopen" onclick="openNav()">&#9776; </span>
+	</div>
+	
+<!--"MIZNA UPPAL" on website has a drop down box which allows the user to switch from light and dark mode-->
+  <div class="bar" id="myNavigationbar">
+	  
+<div class="indexdropdown">
+  <button class="indexdropbtn">MIZNA UPPAL</button>
+  <div class="indexdropdown-content">
+    <a onclick="lightDarkSheet('css/mainstyle.css')" class ="lightdark"><img src="images/lightbulb.png" height="50px" width="50px"> LIGHT </a>
+    <a onclick="lightDarkSheet('css/dark.css')" class ="lightdark"><img src="images/darkbulb.png" height="50px" width="50px">DARK</a>
+  </div>
+</div>
+    <a href="#chapter1" class="topbutton bar-item topcenter">1</a>
+	      <a href="#chapter2" class="topbutton bar-item topcenter">2</a>
+	      <a href="#chapter3" class="topbutton bar-item topcenter">3</a>
+	      <a href="#chapter4" class="topbutton bar-item topcenter">4</a>
+	      <a href="#chapter5" class="topbutton bar-item topcenter">5</a>
+	</div>
+</div>
+<!--END OF HEADER	-->
+
+<!--box wrap for padding -->
+		<div class = "chapters-box-wrap">
+
+<!--first chapter section; I gave this section an id so they can be used in the links that are supposed to take you to different parts of the page. Ignore the name of the section class, I named it determination because I aimed to try to finish this page in a day.-->
+<section class = "determination" id ="chapter1" >
+<!--container for all of the chapters; this is also what is going give our white card- like background-->
+ <div class = "chapterscontain">
+<!--This div acts to give some extra padding-->
+	 <div class = "chapterscontain0">
+<!--This is for measurement of the box for "chapters" text-->
+		<div class = "chapterscontain2">
+<!--This is for styling the box of the "chapter" parts; giving it a background and a border colour as well-->
+			<div class = "chapterscontain3">
+<!--The actual text itself that is going to be in the box, it has been put into paragraph element; added font style and size to it's class.-->
+			   <p class = "chapterheadtext"> Chapter 1</p>
+			</div>
+		</div>
+<!--END OF CHAPTERSCONTAIN3-->
+<!--END OF CHAPTERSCONTAIN2-->
+				
+<!--This will div contains the paragraph(s), I wanted text to have more padding and also be justified.-->
+  <div class ="chapterpara"> 						
+<!--I wanted the first character to be different to the rest therefore I added span an gave that a class and styled that class seperately to how I styled my paragraphs that are within this "chapterpara" div.-->
+	  <p><span class="firstcharacter">W</span>hen I was 4 years old, my mother asked me a question; she asked “What do you want to be when you’re older?”</p>
+<!--Addded more paragraphs, I could have used <br> for breaks but I personally prefer the paragraph struture because then I can adjust width between paragraphs and line heights etc-->
+		<p>If you were to ask me this question now, I’d have no clue. However, the 4 year old Mizna shot a fast reply of “I want to be a teacher”. My mother laughed and told me to become a doctor, just like any other Asian parent.</p>
+		
+		<p>On a serious note though, why did I want to become a teacher? Habits never die and I have a habit of wanting to help people. They might not ask for my help, but I’ll help them regardless. This leads me to talk about my who biggest inspiration was when I was younger. My aunt, who is also a teacher was my biggest inspiration as a child. She is the one who instilled a passion for literature and arts into my soul and for that I am ever so grateful, even today. </p>
+				</div>
+<!--END OF CHAPTERPARA-->
+
+<!--I have added a button to the bottom of the white card; I have given it two classes one styling. One of the classes places the button in the center of the white card whilst the other is for styling the button. I have added a link to the button which leads to chapter two. This was done with the use of ids (since each "section" has an id.-->
+<button class="chapterbutton chapterbutton1"><a class="chapterbuttontext" href="#chapter2"> Chapter 2 </a> </button>
+				</div>
+			</div>
+		</section>
+<!--END OF CHAPTERSCONTAIN0-->
+<!--END OF CHAPTERSCONTAIN-->
+<!--END OF SECTION-->
+		
+			
+<!--Second chapter section; it has an id that can be used to link-->
+<section class = "determination" id ="chapter2">
+<!--container for all of the chapters; this is also what is going give our white card- like background-->
+	<div class = "chapterscontain">
+<!--This div acts to give some extra padding-->
+	   <div class = "chapterscontain0">
+<!--This is for measurement of the box for "chapters" text-->
+		  <div class = "chapterscontain2">
+<!--This is for styling the box of the "chapter" parts; giving it a background and a border colour as well-->
+			  <div class = "chapterscontain3">
+<!--The actual text itself that is going to be in the box, it has been put into paragraph element; added font style and size to it's class.-->
+			<p class = "chapterheadtext"> Chapter 2</p>
+			</div>
+		</div>
+<!--END OF CHAPTERSCONTAIN3-->
+<!--END OF CHAPTERSCONTAIN2-->
+								
+<!--This will div contains the paragraph(s), I wanted text to have more padding and also be justified.-->
+	<div class ="chapterpara"> 						
+<!--I wanted the first character to be different to the rest therefore I added span an gave that a class and styled that class seperately to how I styled my paragraphs that are within this "chapterpara" div.-->				
+		<p><span class="firstcharacter">T</span>alent doesn’t just appear overnight, it comes through with perseverance and dedication. Being devoted for traditional arts at a young age; my arts were mostly creative and not visual. I loved drawing and I loved being admired; nothing is more satisfying than someone looking at your work and giving you a pat on the back. My parents were always impressed with how well I could draw but each compliment would come with a bitter remark of how I should be studying. So like any rebel teenager, I’d practice in secret and try to balance my studies at the same time.
+		Out of the 14 GCSE subjects I studied, Art GCSE was not one of them. Despite achieving A*-B in all my GCSEs, there is still a deep regret inside me for not being able to express my artistic skills in a classroom environment where I’d be given feedback.
+		Studying at university has given me more time to work on my hobbies without any restrictions. Painting digitally is the most convenient for me considering the variety of art styles you can explore with entirely using a single medium at any location; I do enjoy drawing traditionally just as much.
+		 </p>
+	</div>
+<!--END OF CHAPTERPARA-->
+				
+<button class="chapterbutton chapterbutton1"><a class="chapterbuttontext" href="#chapter3"> Chapter 3 </a> </button>
+<!--I have added a button to the bottom of the white card; I have given it two classes one styling. One of the classes places the button in the center of the white card whilst the other is for styling the button. I have added a link to the button which leads to chapter three. This was done with the use of ids (since each "section" has an id.-->
+				</div>
+			</div>
+		</section>
+<!--END OF CHAPTERSCONTAIN0-->
+<!--END OF CHAPTERSCONTAIN-->
+<!--END OF SECTION-->
+		
+			
+			
+<!--Third chapter section; it has an id that can be used to link-->		
+<section class = "determination" id ="chapter3">
+<!--container for all of the chapters; this is also what is going give our white card- like background-->	
+	<div class = "chapterscontain">
+<!--This div acts to give some extra padding-->		
+		<div class = "chapterscontain0">
+<!--This is for measurement of the box for "chapters" text-->			
+			<div class = "chapterscontain2">
+<!--This is for styling the box of the "chapter" parts; giving it a background and a border colour as well-->				
+				<div class = "chapterscontain3">
+<!--The actual text itself that is going to be in the box, it has been put into paragraph element; added font style and size to it's class.-->					
+					<p class = "chapterheadtext"> Chapter 3</p>
+				</div>
+			</div>
+<!--END OF CHAPTERSCONTAIN3-->
+<!--END OF CHAPTERSCONTAIN2-->
+	
+<!--This will div contains the paragraph(s), I wanted text to have more padding and also be justified.-->
+	<div class ="chapterpara"> 
+<!--I wanted the first character to be different to the rest therefore I added span an gave that a class and styled that class seperately to how I styled my paragraphs that are within this "chapterpara" div.-->				
+		<p><span class="firstcharacter">J</span>ust some interesting opportunities I have been given. </p>
+		<p>Being good at art and graphics designing has allowed me to work with small companies such as Planet Hobbywood; a small American sports shop that needed ideas for designing their new logo. </p>
+
+		<p>Currently, I am working for a local mosque magazine, which publishes over 1200 magazines every 4 months; the project is small and aimed at Muslim women. Since the target audience is small and our funding is little with each household only paying £10 a year, we have to do all the work ourselves; from writing the articles, to designing, publishing and even packaging; distribution is done via curtsey of Royal Mail. I was placed under this position through recommendation since they were in need on specific skill set students and graduates.  </p>
+
+		<p>For the past 2 years, I have been in charge of creating monthly newsletters for my local mosque community. I am handed data and images through various secretaries and my job is to implement a newsletter that contains all this information along with information I am handed down from my department. Being an office bearer has improved my graphic designing and art skills and led me to work with other clients and large scale projects as well. </p>
+	</div>	
+<!--END OF CHAPTERPARA-->
+			
+<!--I have added a button to the bottom of the white card; I have given it two classes one styling. One of the classes places the button in the center of the white card whilst the other is for styling the button. I have added a link to the button which leads to chapter four. This was done with the use of ids (since each "section" has an id.-->
+<button class="chapterbutton chapterbutton1"><a class="chapterbuttontext" href="#chapter4"> Chapter 4 </a> </button>
+				</div>
+			</div>
+		</section>
+<!--END OF CHAPTERSCONTAIN0-->
+<!--END OF CHAPTERSCONTAIN-->
+<!--END OF SECTION-->		
+	
+<!--Fourth chapter section; it has an id that can be used to link-->
+	<section class = "determination" id ="chapter4">
+<!--container for all of the chapters; this is also what is going give our white card- like background-->	
+		<div class = "chapterscontain">
+<!--This div acts to give some extra padding-->		
+			<div class = "chapterscontain0">
+<!--This is for measurement of the box for "chapters" text-->			
+				<div class = "chapterscontain2">
+<!--This is for styling the box of the "chapter" parts; giving it a background and a border colour as well-->				
+					<div class = "chapterscontain3">
+<!--The actual text itself that is going to be in the box, it has been put into paragraph element; added font style and size to it's class.-->					
+						<p class = "chapterheadtext"> Chapter 4</p>
+					</div>
+				</div>
+<!--END OF CHAPTERSCONTAIN3-->
+<!--END OF CHAPTERSCONTAIN2-->	
+
+<!--This will div contains the paragraph(s), I wanted text to have more padding and also be justified.-->
+<div class ="chapterpara"> 						
+<!--I wanted the first character to be different to the rest therefore I added span an gave that a class and styled that class seperately.-->				
+<p><span class="firstcharacter">E</span>xhibitions – working with tight deadlines</p>
+
+	<p>Through recommendations, I was given the role of main graphics designer for an international exhibition. This exhibition was to be placed at an event where people from all over the word were going to be seeing. I was placed with some heavy responsibilities and tight deadlines since the previous team decided to quit 2 weeks before the setting up. After numerous meetings with several clients and the managers who were organising the events, I was briefed on my tasks; a job which was to be completed by a team of 8 in the time period of a month was now being completed by a single person in just two weeks. The work was exhausting and hectic since whilst in the middle of completing a design, I would get phone calls telling me to change everything. There would be random meetings in the middle of the day which I was obliged to attend; most of my work was being done in the car. After many sleepless nights and survival on cups of coffee, I managed to get all the printing done via a pre-booked appointment at the printing shop and was driven by my manager straight to the venue on the day of set-up.</p>
+
+	<p>The exhibition was a success and I was nominated and won a regional award for my efforts. The same exhibition has been set up many times this year and I’ve had to allocate myself time to setting it up whenever I am asked to do so. This experience really opened my eyes to the importance of time management and how all the work should be in the favour of the client. Through this large scale project, I have been placed with many other opportunities. In the future, I will be working on annual report designing.</p>
+
+<!--I wanted the first character to be different to the rest therefore I added span an gave that a class and styled that class seperately.-->				
+	<p><span class="firstcharacter">L</span>eaflet distribution system</p>
+
+	<p>In the past, I have helped my father create a leafleting system. The system was used to split the UK into regions and sectors; this data was then used to implement fastest leaflet delivery times. It was used to fulfil monthly quotas of leaflet delivery. The system was then published online to make it easier for everyone who needs to use it; the only way is access it is through a password which is generated and provided after contact.</p>
+	</div>
+<!--END OF CHAPTERPARA-->
+
+<!--I have added a button to the bottom of the white card; I have given it two classes one styling. One of the classes places the button in the center of the white card whilst the other is for styling the button. I have added a link to the button which leads to chapter five. This was done with the use of ids (since each "section" has an id.-->
+<button class="chapterbutton chapterbutton1"><a class="chapterbuttontext" href="#chapter5"> Chapter 5 </a> </button>
+				</div>
+			</div>
+		</section>
+<!--END OF CHAPTERSCONTAIN0-->
+<!--END OF CHAPTERSCONTAIN-->
+<!--END OF SECTION-->			
+
+<!--Fifth and last chapter section; it has an id that can be used to link-->
+	<section class = "determination" id ="chapter5">
+<!--container for all of the chapters; this is also what is going give our white card- like background-->			
+		<div class = "chapterscontain">
+<!--This div acts to give some extra padding-->					
+			<div class = "chapterscontain0">
+<!--This is for measurement of the box for "chapters" text-->					
+				<div class = "chapterscontain2">
+<!--This is for styling the box of the "chapter" parts; giving it a background and a border colour as well-->				
+					<div class = "chapterscontain3">
+<!--The actual text itself that is going to be in the box, it has been put into paragraph element; added font style and size to it's class.-->					
+						<p class = "chapterheadtext"> Chapter 5</p>
+
+		</div>
+	</div>
+<!--END OF CHAPTERSCONTAIN3-->
+<!--END OF CHAPTERSCONTAIN2-->	
+				
+<!--This will div contains the paragraph(s), I wanted text to have more padding and also be justified.-->
+	<div class ="chapterpara"> 						
+<!--I wanted the first character to be different to the rest therefore I added span an gave that a class and styled that class seperately.-->				
+		<p><span class="firstcharacter">F</span>uture plans</p>
+
+		<p>- Currently, I am in the middle of an application to work as a graphics designer for a TV and radio station; after being provided with the opportunity at exhibition events.</p>
+
+		<p>- I intend to get an inter-ship within the next three years to support my computer science degree and enable myself to become a successful candidate when applying for jobs. </p>
+
+		<p>- In the future, I intend to make an income part-time through my art hobby; possibly after I have gained more skills in this field. </p>
+		</div>
+<!--I have added a button to the bottom of the white card; I have given it two classes one styling. One of the classes places the button in the center of the white card whilst the other is for styling the button. I have added a link to the button which leads right back to the top of the page where the navigation bar is. This was done with the use of ids (since each "section" has an id.-->			
+<button class="chapterbutton chapterbutton1"><a class="chapterbuttontext" href="#myNavigationbar"> Back to top </a> </button>
+						</div>
+					</div>
+				</section>
+<!--END OF CHAPTERSCONTAIN0-->
+<!--END OF CHAPTERSCONTAIN-->
+<!--END OF SECTION-->			
+		
+			</div>
+		</div>
+<!--END OF CHAPTERS-BOX-WRAP-->
+<!--END OF CHAPTERSBACKGROUND-->
+
+	
+<script type="text/javascript">
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+	
+<!--The following script is using standard javascript.
+
+It is used when I want the user to be able to use a light or dark stylesheet.
+   
+<a onclick="lightDarkSheet('css/main2.css')" class ="lightdark"></a>
+
+At the top we have put what style sheet we want when we click on the button. This code gets the stylesheet for us so that it can be applied. For the example given, on clicking this link, we would be using the function "lightDarkSheet" to get the stylesheet that we want.
+
+-->
+	<script type="text/javascript">
+	function lightDarkSheet(sheet){
+	document.getElementById('lightstyle').setAttribute('href', sheet);
+	document.getElementById('darkstyle').setAttribute('href', sheet);
+	}
+	</script>
+	
+	
+<!--	
+
+Smooth scrolling javascript code uses jquery. There is a library linked at the top, without it, the code wouldn't work.
+
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+When you click on the link (referred as "a"), it starts a function. This function is to add smooth scrolling onto all the links that are on the page.
+    
+if (this.hash !== "") {
+
+We will be using ids (which are reffered by hashes #); however we need to be careful that there is a value for "this.hash".
+
+event.preventDefault();
+
+This is to prevent any default anchor clicking behaviour.
+
+var hash = this.hash;
+
+We declare a new variable which is used to "store" the hash.
+
+$('html, body').animate({
+scrollTop: $(hash).offset().top
+}, 1000, function(){
+
+NOW, we can use jquery to animate and add a smooth page scroll. This smooth scrolling effect is added to the "html" and body. We use the ".animate" which is a jquery method. We apply "scrollTop" to all the "hash" ids. We also specify a number which is referred to in millisconds; this is how long it will take for us to get to the area that we want.
+        
+window.location.hash = hash;
+
+Lastly, the "#/ hash" is added to the URL once we have finished scrolling; concluding our if statement.
+
+-->
+	
+<script type="text/javascript">
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+	  
+    if (this.hash !== "") {
+      event.preventDefault();
+		
+      var hash = this.hash;
+		
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+	
+</body>
+	
+<footer>
+<!--Container for the footer; keeps the footer together so I can style the entire footer-->
+	<div class = "footercontainer">
+<!--div for copyright; is styled seperately to the div below within the same container-->
+  <div class="copyright">
+    <p>Mizna Uppal © 2017</p>
+  </div>
+<!--END OF COPYRIGHT DIV-->
+<!--This container div contains all the link placed in the footer bar-->
+  <div class="footerlinkscontainer">
+		<a href="index.html" class = "footerlinks">SplashPage</a>
+		<a href="index2.html" class = "footerlinks">Home</a>
+		<a href="art.html" class = "footerlinks">Art</a>
+		<a href="chapters.html" class = "footerlinks">Chapters</a>
+	  	<a href="charity.html" class = "footerlinks">Charity</a>
+  </div>
+<!--END OF FOOTERLINKSCONTAINER-->
+		</div>
+<!--END OF FOOTERCONTAINER-->
+</footer>
+<!--END OF FOOTER-->
+	
+
+</html>

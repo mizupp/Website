@@ -1,0 +1,220 @@
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mizna portfolio">
+	<meta name="keywords" content="Mizna,Portfolio,Art">
+	<meta name="author" content="Mizna Uppal">
+
+		<title>Mizna Uppal</title>
+ <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">       
+        
+      
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/fading.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/splashpage.css"/>
+        		<script type="text/javascript" >document.documentElement.className = 'fonts';</script>		
+
+		
+	</head>
+
+<body>
+		
+<!--SPLASH PAGE	-->
+		
+<!-- #wrapink id is being used in script below. The script can apply the code onto the where the "wrapink" id is. The "ink dot stain" mouseover script effect will only appear on items above this div hence why I have placed it at the top.-->
+<div id = "wrapink"></div>
+
+<!--"middle" class allows the whole page to be covered; it has a width of 100% and a height of 100%. I wanted my work to be centered on the Splash page hence why I have another "fixingmiddle" class; this class also has a fixed position. -->
+		    <div class="middle fixingmiddle">
+<!--"insidemiddle" class determines the font size of my h2. Through media queries on my splashpage stylesheet this changes size. -->
+             <div class="insidemiddle">
+              <h2>M<i>IZ</i><i>N</i>A U<i>PP</i>AL</h2>
+<!--This link has several classes. The "ajourney" class determines the style of the text. It also has the classes from the earlier divs still affecting it therefore it stays in the middle of the page. "textanimation" class is for the typewriting animation. "fadingmiznapages" classes is for the fade effect; the script is written in "fading.js"-->
+				 <a class = "ajourney textanimation fadingmiznapages" href="index2.html">View my journey...</a>
+            </div>	  
+		</div>
+		
+<!--The script is for the ink dot stain effect; it uses jquery.
+
+  var mousePos = {};
+
+mousePos is declared as a variable followed by the declaration of our function.
+
+
+ function getRandomInt(min, max) {
+   return Math.round(Math.random() * (max - min + 1)) + min;
+ }
+
+We declare a function of "randomInt(min,max)"; this is going to be used later when we are trying to get our random values for colours and size etc.
+
+
+  $(window).mousemove(function(e) {
+    mousePos.x = e.pageX;
+    mousePos.y = e.pageY;
+  });
+
+The variable mousePos is given a x and y page axis; this changes according to different user windows.
+
+
+  $(window).mouseleave(function(e) {
+    mousePos.x = -10;
+    mousePos.y = -10;
+  });
+  
+In the mouseleave function, we are able to change our mousePos.x and mousePos.y by a number. This number was higher but I changed it to a lower number of -10 because I didn't want the ink stains to keep appearing even when my house isn't on the screen. For exammple: If mousePos.x and mousePos.y were both 50 and your screen was split dually, the ink stains would still appear on the screen even if your mouse isn't on it; this was an effect I wanted to avoid.
+
+
+  var draw = setInterval(function(){
+    if(mousePos.x > 0 && mousePos.y > 0){
+
+We declare another variable of "draw" which is a function. The code follows with an if statement when the mousePos.x is greater than 0 and mousePos.y > 0; this would mean when the mouse is actually on the page, the code can start to execute.
+
+
+  var range = 400;
+
+We declare a range, this is how far apart we want the little circles to be. In the original, the range was much smaller, since the original code had a mouse cursor effect; I was looking for a sprayed dot ink effect hence why I went for a significantly large range of 400.
+
+
+  var color = "background: rgb("+getRandomInt(25,100)+","+getRandomInt(0,0)+","+getRandomInt(0,0)+");";
+
+We declare the variable color and then we use our getRandomInt function from earlier. I changed this completely since I only wanted one colour unlike the multicolours the original code was using. Instead I changed the code to:
+
+  var color = "background: rgb(175, 58, 91);"; 
+
+
+Following from this,
+
+ var sizeInt = getRandomInt(0.5, 12);
+
+Determines how big the dots are, I wanted really small dots therefore I changed this accordingly.
+
+  size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
+
+sizeInt only provides us with random numbers between 0.5 and 12, the variable size is able to turn this into pixels.
+
+      var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
+      
+      var top = "top: " + getRandomInt(mousePos.y-range-sizeInt, mousePos.y+range) + "px;"; 
+
+These variables are creating a min and max range; when the mousePos.x is then our biggest scenario would be that mousePos.x has added range (our max) and our min would be mousePos.x-range-sizeInt. We only need to do left and top since this code accomodates for right and down with the min and max.
+
+ var style = left+top+color+size;
+      $("<div class='ink' style='" + style + "'></div>").appendTo('#wrapink').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();}
+
+Lastly we apply some styles and make use of the jquery library. It shows that the following code would be applied to "wrapink" id only (I could use this in the future by adding this id to only certain divs/ little parts that I want this hoverable effect rather than the whole screen). We also have a class "ink"; I have edited this class to suit my website.
+-->
+		
+<script type="text/javascript">
+
+ $(document).ready(function(){
+  
+  var mousePos = {};
+
+ function getRandomInt(min, max) {
+   return Math.round(Math.random() * (max - min + 1)) + min;
+ }
+  
+  $(window).mousemove(function(e) {
+    mousePos.x = e.pageX;
+    mousePos.y = e.pageY;
+  });
+  
+  $(window).mouseleave(function(e) {
+    mousePos.x = -10;
+    mousePos.y = -10;
+  });
+  
+  var draw = setInterval(function(){
+    if(mousePos.x > 0 && mousePos.y > 0){
+
+	  var range = 400;
+      var color = "background: rgb(175, 58, 91);"; 
+      
+      var sizeInt = getRandomInt(0.5, 12);
+		
+		
+      size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
+      
+      var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
+      
+      var top = "top: " + getRandomInt(mousePos.y-range-sizeInt, mousePos.y+range) + "px;"; 
+
+      var style = left+top+color+size;
+      $("<div class='ink' style='" + style + "'></div>").appendTo('#wrapink').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();}); 
+    }
+  }, 1);
+});
+
+	</script>		
+		
+<!--
+<script type="text/javascript">
+
+ $(document).ready(function(){
+  
+  var mousePos = {};
+
+ function getRandomInt(min, max) {
+   return Math.round(Math.random() * (max - min + 1)) + min;
+ }
+  
+  $(window).mousemove(function(e) {
+    mousePos.x = e.pageX;
+    mousePos.y = e.pageY;
+  });
+  
+  $(window).mouseleave(function(e) {
+    mousePos.x = -10;
+    mousePos.y = -10;
+  });
+  
+  var draw = setInterval(function(){
+    if(mousePos.x > 0 && mousePos.y > 0){
+      
+      var range = 400;
+      
+      var color = "background: rgb("+getRandomInt(25,100)+","+getRandomInt(0,0)+","+getRandomInt(0,0)+");";
+      
+      var sizeInt = getRandomInt(0.5, 12);
+		
+      size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
+      
+      var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
+      
+      var top = "top: " + getRandomInt(mousePos.y-range-sizeInt, mousePos.y+range) + "px;"; 
+
+      var style = left+top+color+size;
+      $("<div class='ink' style='" + style + "'></div>").appendTo('#wrapink').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();}); 
+    }
+  }, 1);
+});
+
+	</script>
+-->
+	</body>
+<!--ON splash page, the footer will remain hidden-->
+<footer>
+<!--Container for the footer; keeps the footer together so I can style the entire footer-->
+	<div class = "footercontainer">
+<!--div for copyright; is styled seperately to the div below within the same container-->
+  <div class="copyright">
+    <p>Mizna Uppal © 2017</p>
+  </div>
+<!--END OF COPYRIGHT DIV-->
+<!--This container div contains all the link placed in the footer bar-->
+  <div class="footerlinkscontainer">
+		<a href="index.html" class = "footerlinks">SplashPage</a>
+		<a href="index2.html" class = "footerlinks">Home</a>
+		<a href="art.html" class = "footerlinks">Art</a>
+		<a href="chapters.html" class = "footerlinks">Chapters</a>
+	  	<a href="charity.html" class = "footerlinks">Charity</a>
+  </div>
+<!--END OF FOOTERLINKSCONTAINER-->
+		</div>
+<!--END OF FOOTERCONTAINER-->
+</footer>
+<!--END OF FOOTER-->
+	
+	
+</html>

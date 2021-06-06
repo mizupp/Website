@@ -1,0 +1,1420 @@
+/*WEB FONTS*/
+ @font-face {
+     font-family: 'butlerblack';
+     src: url('fonts/butler_black-webfont.woff2') format('woff2'), url('fonts/butler_black-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+ @font-face {
+     font-family: 'butlerblackstencil';
+     src: url('fonts/butler_black_stencil-webfont.woff2') format('woff2'), url('fonts/butler_black_stencil-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+ @font-face {
+     font-family: 'chivo-bold';
+     src: url('fonts/chivo-bold-webfont.woff2') format('woff2'), url('fonts/chivo-bold-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+ @font-face {
+     font-family: 'chivo-black';
+     src: url('fonts/chivo-black-webfont.woff2') format('woff2'), url('fonts/chivo-black-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+ @font-face {
+     font-family: 'chivo-regular';
+     src: url('fonts/chivo-regular-webfont.woff2') format('woff2'), url('fonts/chivo-regular-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+ @font-face {
+     font-family: 'butler_light';
+     src: url('fonts/butler_light-webfont.woff2') format('woff2'), url('fonts/butler_light-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+/*I decided I wanted the body to have some basic attributes such as font-size and worked on top of them from that. It helped give a clear sense of sizing. The margin-left and margin right are quite small however I wanted a bit of the grey to show behind the image background. It was important for the the "overflow-x" to be hidden since I didn't want a scrollbar at the bottom of the page if there was an overflow along x-axis */
+ body {
+     line-height: 1.8;
+     background: #eeeff0;
+     margin-left: 10px;
+     margin-right: 10px;
+     height: 100%;
+     overflow-x:hidden;
+}
+/*BEING APPLIED TO DIFFERENT PAGES*/
+/*box-wrap is used to give the background image of the girl;
+ I wanted the image to cover the entire page only once and not repeat, I also wanted this background image to be right in the center hence why it never gets smaller as the page width decreases. It has a max-width of 1600px and stays in the middle of the page*/
+ .box-wrap {
+     background: rgba(255,255,255,0.3);
+     background-image: url('../images/feelings1.png');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+     max-width: 1600px;
+     margin: 1% auto;
+     opacity: 1;
+}
+/*Due to the header taking up some space, having this allows my page or any content in div to move down slightly when needed*/
+ .down{
+     padding-top: 8px;
+     padding-left: 10px;
+     padding-right: 10px;
+}
+/*HEADER CSS*/
+/*This is used to make sure that my header at the top has a white background and that its position is absolute. This means that it is positioned nearest to the nearest positioned ancestor. It has a width of 100% so it can cover the entire top part of the page, acting as a header*/
+ .top{
+     position:absolute;
+     width:100%;
+     z-index:1;
+     top:0;
+     left: 0;
+     background: white;
+}
+/*ENDER OF HEADER CSS*/
+/*THE DROPDOWN LIGHT OR DARK BUTTON*/
+/*This gives the button a white background and pink text colour. I have given it a padding of 16px - doing this also makes the white header part decently sizes in length. I have used standard font-size of 20px and "chivo-bold" webfont. When you hover over it, your cursor should change into a pointer*/
+ .indexdropbtn {
+     background-color: white;
+     color: #f990a7;
+     padding: 16px;
+     font-size: 20px;
+     border: none;
+     cursor: pointer;
+     font-family: 'chivo-bold';
+}
+/*I wanted a smooth transition upon hovering over the button and for it to change to the colour black. I let the transition speed be 0.6s since this is not too fast and not too slow.*/
+ .indexdropbtn:hover{
+     color: black;
+     transition: 0.6s;
+}
+/*It was important to let the positioning be relative so that I can give it a float of left. This would ensure that the button is always on the left side in the corner. */
+ .indexdropdown {
+     position: relative;
+     display: inline-block;
+     float:left;
+}
+/*The display is none so that the dropdown menu will stay hidden otherwise it would stay at the top of the page. I have customised the drop down menu on here and given it a min-width of 70px and z-index of 5 so that it will stay on top. I have given it a opaque background colour to compliment with the theme of the website. When the drop down menu does come down. It has a pointer cursor so that the user knows it is a button*/
+ .indexdropdown-content {
+     display: none;
+     position: absolute;
+     background-color: rgba(255,55,100,0.5);
+     min-width: 70px;
+     z-index: 5;
+     cursor: pointer;
+}
+/*Given the text within the dropdown button menu font size and a font family to compliment with the theme of the website*/
+ .lightdark{
+     font-size: 18px;
+     font-family: 'chivo-regular';
+}
+/*The contents have a black colour and a padding of 20px 20px;
+ this allows the contents to be in a clear box that looks better than when there is no padding. There is no text decoration since you can get borders and underlined links and I wanted to avoid that. */
+ .indexdropdown-content a {
+     color: black;
+     padding: 20px 20px;
+     text-decoration: none;
+     display: block;
+}
+/*Upon hover the background colour of the drop down menu changes, it transitions smoothly. */
+ .indexdropdown-content a:hover {
+     background-color: white;
+     transition: 0.6s;
+}
+/*This is important since it will allow the drop down menu to show.*/
+ .indexdropdown:hover .indexdropdown-content {
+     display: block;
+}
+/*MEDIA QUERIES FOR LIGHT AND DARK DROP DOWN MENU*/
+/*In these media queries I am mainly changing the font-sizes and the padding sizes to accomodate for different sized devices.*/
+ @media screen and (max-width: 768px) {
+     .indexdropbtn {
+         font-size: 18px;
+    }
+     .indexdropdown-content a {
+         padding: 15px 15px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .indexdropbtn {
+         font-size: 16px;
+    }
+     .indexdropdown-content a {
+         padding: 12px 12px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .indexdropbtn {
+         font-size: 18px;
+         padding-left:8px;
+         padding-right:8px;
+    }
+     .indexdropdown-content a {
+         padding: 10px 10px;
+    }
+}
+/*END OF MEDIA QUERIES FOR LIGHT AND DARK DROP DOWN MENU*/
+/*END OF THE DROPDOWN LIGHT OR DARK BUTTON*/
+/*FIXED MENU CSS*/
+/*I wanted a small fixed menu on right side of my website;
+ I have given it a width of 60px and have placed it to the right of my page. I left this has 1% since I didn't want it going to far to the edge as it would on 0. I gave this a background colour of white so that it is easy to see when you scroll down since it is fixed and scrolls with the user.*/
+ .menu{
+     position: fixed;
+     background-color: white;
+     width: 60px;
+     height: 50px;
+     z-index: 200;
+     right: 1%;
+     text-align: center;
+     color: black;
+}
+/*When you hover over the little navigation menu, it changes from black to pink smoothly*/
+ .menu:hover{
+     color: #f990a7;
+     transition: 0.6s;
+}
+/*I felt 30px font size was a reasonable and decent size for the navigation menu bar size;
+ we want people to know that it is a button hence why the cursor has been changed to pointer.*/
+ .navopen {
+     cursor:pointer;
+     font-size:30px;
+}
+/*the overlay is the navigation menu that will appear after you click on the menu nav bar. It has a height of 100% since we want it to cover the whole page and a fixed position there even if you were to scroll down whilst the navigation menu has appeared, the overlay would still be at the top and stay fixed on the page. I have settled for dark grey for the background of the overlay. If there is an overflow along the x axis, for example if the font size was dramatically increased etc then a scroll bar would not appear. There is a smooth transition into the overlay at 0.6s speed. It has a top and left of 0 since that is where we want the navigation bar to be coming in from.*/
+ .overlay {
+     height: 100%;
+     width: 0;
+     position: fixed;
+     background-color: rgb(157,157,157);
+     background-color: rgba(157,157,157, 0.9);
+     z-index: 1;
+     top: 0;
+     left: 0;
+     transition: 0.6s;
+     overflow-x: hidden;
+}
+/*The content that is wihitn overlay has been given a relative position, all the items have a width of 100% to ensure that they always stay in the middle of the page. There is a top of 25% to bring it down slightly*/
+ .overlay-content {
+     position: relative;
+     top: 25%;
+     width: 100%;
+     margin-top: 30px;
+     text-align: center;
+}
+/*I have styled the links to suit the theme of the website. The links have a transition of 0.4s for when they are hovered upon. I have used block to ensure that the links stack on top of each other rather than float/overlap onto one another.*/
+ .overlay a {
+     text-decoration: none;
+     font-size: 28px;
+     color: black;
+     font-family: 'chivo-bold';
+     display: block;
+}
+/*The links change colour when hovered upon, they have a transition of 0.4s.*/
+ .overlay a:hover, .overlay a:focus {
+     color: #e0dfdf;
+     color: rgba(224,224,224, 0.9);
+     transition: 0.4s;
+}
+/*On the overlay there is a close button, this has been styled appropriately and given an absolute position where it can be on the overlay page.*/
+ .overlay .closebtn {
+     position: absolute;
+     right: 45px;
+     top: 20px;
+     color: #f990a7;
+     font-size: 90px;
+}
+/*MEDIA QUERIES FOR FIXED MENU*/
+/*I have made small changes for when the website is being previewed on a small device;
+ the font size changes and the button is placed a little differently so it continue to look pleasing.*/
+ @media screen and (max-height: 460px) {
+     .overlay a {
+         font-size: 18px 
+    }
+     .overlay .closebtn {
+         font-size: 30px;
+         top: 15px;
+         right: 35px;
+    }
+}
+/*END OF FIXED MENU CSS*/
+/*CHAPTERS PAGE CSS*/
+/*BUTTONS FOR CHAPTERS PAGE*/
+/*This is to ensure that we are using the whole width*/
+ .bar{
+     width:100%;
+}
+/*Padding around the item to make sure there is equal distance between each link. It floats to the left to prevent stacking.Since width was 100%, it will stay as 100% here as well*/
+ .bar .bar-item{
+     padding:8px 16px;
+     float:left;
+     width:auto;
+     border:none;
+     outline:none;
+     display:block 
+}
+/*design of the buttons/links, these are matched to compliment the website. */
+ .bar .topbutton{
+     white-space:normal;
+     font-family: 'chivo-bold';
+     text-decoration: none;
+     color: #f990a7;
+     font-size: 20px;
+}
+/*Upon hover there is a smooth transition from pink to the colour black for text.*/
+ .topbutton:hover{
+     color: black;
+     transition: 0.7s;
+}
+/*MEDIA QUERIES FOR CHAPTERS LINKS*/
+/*some media queries to change the padding and fontsize once the screen size width gets smaller*/
+ @media screen and (max-width: 500px) {
+     .bar-item{
+         padding:6px 6px !important;
+    }
+     .topbutton{
+         font-size: 12px;
+    }
+}
+/*when you hover over the links, the cursor changes into a pointer so you know you are going to be clicking on a link.*/
+ .bar .topbutton:hover{
+     cursor: pointer;
+}
+/*This is used to given the a background image, I wanted the background image to cover the entire page and be in the center, I didn't want any repetition and I wanted the image to stay fixed and not move*/
+ .chaptersbackground {
+     background-image: url('../images/chaptersback.png');
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+}
+/*I have created a margin of 100px and given it the colour white to start with implementation of chapters cards*/
+ .chapterscontain{
+     margin: 100px;
+     background-color: white;
+}
+/*this is for the little chapter box*/
+ .chapterscontain2{
+     margin: 30px;
+     padding: 0% 25%;
+}
+/*added some more padding to make the content inside the chaptercontain0 come indent a little and come closer together*/
+ .chapterscontain0{
+     padding: 25px;
+}
+/*Gave the div which contains chapters a border for visual purposes. I gave this div the same background as the background for entire chapters page. This gave a parallax effect upon scroll.*/
+ .chapterscontain3{
+     border: 10px solid #f990a7;
+     margin: 0 auto;
+     background-image: url('../images/chaptersback.png');
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+}
+/*this is where I have added styling to the chapters text;
+ I went for the bold typography font style;
+ aligned the text to the entire and gave it a line height to keep the text in the center.*/
+ .chapterheadtext{
+     line-height: 80px;
+     font-size: 80px;
+     text-align: center;
+     font-family: 'butlerblackstencil';
+     color: black;
+     text-shadow: 3px 3px 1px #f990a7;
+}
+/*The button on this page is very simple;
+ this shows the styling of the button.*/
+ .chapterbutton {
+     background-color: #f990a7;
+     border: none;
+     padding: 20px;
+     text-align: center;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+}
+/*This was to make sure that the button stays in the middle*/
+ .chapterbutton1 {
+     display: block;
+     margin: 0 auto;
+}
+/*This made sure that the button doesn't have any text decorations such as underlined text etc*/
+ .chapterbuttontext {
+     text-decoration: none;
+     color: white;
+     font-family: 'butlerblack';
+}
+/*When you hover over it, it smoothly transitions to black*/
+ .chapterbutton:hover{
+     background-color: black;
+     transition: 0.6s;
+}
+/*I wanted the first letter of each paragraph to be different to the rest of the paragraph. This allows the first letter to float to the left and have a bigger size/different font etc to the paragraph.*/
+ .firstcharacter {
+     color: #f990a7;
+     float: left;
+     font-size: 75px;
+     line-height: 60px;
+     padding-top: 4px;
+     padding-right: 8px;
+     padding-left: 3px;
+     font-family: 'butlerblack';
+}
+/*Allow the text of the paragraph to be justfied;
+ picked out regular readable font style and a standard font size. There is more padding since I wanted the text to be even more towards the middle of the white card.*/
+ .chapterpara{
+     text-align: justify;
+     padding: 100px;
+     font-family: 'chivo-regular';
+     font-size: 22px;
+}
+/*this is animation which allows the everything that is within chapterscontain to slide into the website from the left. It is quite similar to how we do the full page navigation bar however we are using css animation instead of js. The animation name is "slidein" so when we are using chapterscontain, it executes the slidein animation;
+ this moves all the contents from left to right. */
+ .chapterscontain {
+     animation-duration: 1s;
+     animation-name: slidein;
+}
+ @keyframes slidein {
+     from {
+         margin-left: 100%;
+         width: 150%;
+    }
+     to {
+         margin-left: 0%;
+         width: 100%;
+    }
+}
+/*I wanted to bring the cards down slightly so you can see the background image better.*/
+ .chapters-box-wrap{
+     padding-top: 100px;
+}
+/*MEDIA QUERIES FOR CHAPTERS PAGE */
+/*These are to ensure that there is appropriate paddings, margin and font sizes no matter what device or platform you are using.*/
+ @media screen and (max-width: 1024px) {
+     .chapterscontain{
+         margin: 60px;
+    }
+     .chapterscontain2{
+         margin: 20px;
+    }
+     .chapterscontain0{
+         padding: 20px;
+    }
+     .chapterheadtext{
+         font-size: 60px;
+    }
+     .chapterbutton{
+         font-size: 16px;
+    }
+     .firstcharacter {
+         font-size: 65px;
+    }
+     .chapterpara{
+         font-size: 22px;
+    }
+     .chapters-box-wrap{
+         padding-top: 70px;
+    }
+}
+ @media screen and (max-width: 768px) {
+     .chapterscontain{
+         margin: 40px;
+    }
+     .chapterscontain2{
+         margin: 10px;
+    }
+     .chapterscontain0{
+         padding: 15px;
+    }
+     .chapterheadtext{
+         font-size: 50px;
+    }
+     .chapterbutton{
+         font-size: 16px;
+    }
+     .firstcharacter {
+         font-size: 55px;
+    }
+     .chapterpara{
+         font-size: 20px;
+         padding: 70px;
+    }
+     .chapters-box-wrap{
+         padding-top: 60px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .chapterscontain{
+         margin: 20px;
+    }
+     .chapterscontain2{
+         margin: 5px;
+    }
+     .chapterscontain0{
+         padding: 10px;
+    }
+     .chapterheadtext{
+         font-size: 25px;
+    }
+     .chapterbutton{
+         font-size: 14px;
+    }
+     .firstcharacter {
+         font-size: 30px;
+    }
+     .chapterpara{
+         font-size: 18px;
+         padding: 20px;
+    }
+     .chapters-box-wrap{
+         padding-top: 50px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .chapterscontain{
+         margin: 8px;
+    }
+     .chapterscontain2{
+         margin: 2px;
+    }
+     .chapterscontain0{
+         padding: 8px;
+    }
+     .chapterheadtext{
+         font-size: 18px;
+    }
+     .chapterbutton{
+         font-size: 12px;
+    }
+     .firstcharacter {
+         font-size: 25px;
+    }
+     .chapterpara{
+         font-size: 12px;
+         padding: 5px;
+    }
+     .chapters-box-wrap{
+         padding-top: 50px;
+    }
+}
+/*END OF CHAPTERS PAGE CSS*/
+/*CHARITY PAGE CSS*/
+/*box-wrap-charity is used to give the background image of the girl;
+ I wanted the image to cover the entire page only once and not repeat, I also wanted this background image to be right in the center hence why it never gets smaller as the page width decreases. */
+ .box-wrap-charity {
+     background-image: url('../images/feelings1.png');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+     max-width: 1600px;
+     margin: 1% auto;
+     opacity: 1;
+}
+/*This is used to give it a little bit of padding both on the left and right of the container*/
+ .charitycontainer {
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 50px;
+     padding-right: 50px;
+}
+/*I wanted my main container to be have more padding however it needed to have an opaque pink background too*/
+ .container3 {
+     padding-top: 20px;
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 50px;
+     padding-right: 50px;
+     background: rgba(255,55,100,0.5);
+}
+/*These were for the little pink cards at the bottom and the main pink card at the top. I gave it suffieicnet padding so that everything is centered well;
+ along with this I gave it another opaque background so that the text is easier to read. The margin at the top helps to keep space between the cards */
+ .container5 {
+     margin-top: 50px;
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 50px;
+     padding-right: 50px;
+     padding-top: 10px;
+     padding-bottom: 30px;
+     background: rgba(255,55,100,0.5);
+}
+/*Styling of the h1 in container5;
+ for more designing, I gave it a border on all sides of 1px*/
+ .container5 h1{
+     line-height: 60px;
+     font-size: 90px;
+     text-align: center;
+     font-family: 'butlerblackstencil';
+     color: black;
+     text-shadow: 3px 3px 1px #f990a7;
+     border-top : solid 1px black;
+     border-bottom : solid 1px black;
+     border-left : solid 1px black;
+     border-right : solid 1px black;
+}
+/*Styling of h2 in container5;
+ I gae it a border all around but the font is slightly smaller*/
+ .container5 h2{
+     line-height: 60px;
+     font-size: 80px;
+     text-align: center;
+     font-family: 'butlerblackstencil';
+     color: black;
+     text-shadow: 3px 3px 1px #f990a7;
+     border-top : solid 1px black;
+     border-bottom : solid 1px black;
+     border-left : solid 1px black;
+     border-right : solid 1px black;
+}
+/*This header of container5 does not have borders and it also is a different font.*/
+ .container5 h3{
+     line-height: 60px;
+     font-size: 70px;
+     text-align: center;
+     font-family: 'butlerblack';
+     color: black;
+     text-shadow: 3px 3px 1px #f990a7;
+}
+/*This header of container5 does not have borders and it also is a different font;
+ it smaller than the other headers. I have also given it a font style of italics.*/
+ .container5 h4{
+     font-size: 20px;
+     text-align: center;
+     font-style: italic;
+     font-family: 'butlerblack';
+     color: black;
+     text-shadow: 3px 3px 1px #f990a7;
+}
+/*paragraphs for all the container5's are consistent and have the same font used;
+ this is an easy to read san serif font.*/
+ .container5 p{
+     font-size: 20px;
+     text-align: center;
+     font-family: 'chivo-regular';
+     color: black;
+}
+/*This is the styling for the little grid table that has information. I gave this column its own background image which is the same as the background but a darker tinted version. This position of this is centered in the middle and covers the entire grid. It has a width of 50% so I have a column of two;
+ the float: left allows it to stay next to each other in a line. Border-box is needed there is no space between the columns - works like a grid. */
+ .column2 {
+     box-sizing: border-box;
+     float: left;
+     width: 50%;
+     padding: 10px;
+     height: 300px;
+     background-image: url('../images/darkback.png');
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+}
+/*This is for the header text within the column;
+ it has some standard styling to meet requirements of my page. The colour is white this time to compliment with the colour of my background.*/
+ .column2 h2 {
+     font-size: 25px;
+     text-align: left;
+     font-family: 'chivo-bold';
+     color: white;
+}
+/*paragraphs within the column grid;
+ whilst for header I used a bold font, for paragraphs I used a regular font*/
+ .column2 p {
+     font-size: 20px;
+     text-align: justify;
+     font-family: 'chivo-regular';
+     color: white;
+}
+/*This is needed since the grid doesn't seperate on its own so I need to prevent any overlapping taking over - in case this ever happens*/
+ .charityseperate{
+     padding-top: 1000px;
+}
+/*I wanted a bit of space between the top of the black grid part and the bottom of container5 header part*/
+ .charitycolumns{
+     margin-top: 20px;
+}
+/*This is being applied to the cards at the bottom since I wanted their background to have a slightly darker background;
+ they have a margin at the top as well to give a bit of space to other cards.*/
+ .charitycontainer4 {
+     margin-right: auto;
+     margin-left: auto;
+     margin-top: 100px;
+     padding-bottom: 50px;
+     background: rgba(255,55,100,0.6);
+}
+/*there is some padding at the bottom so that the gallery box looks a little better;
+ before the gallery box didn't have enough pink background at the bottom*/
+ .charitygallery{
+     padding-bottom: 50px;
+}
+/*MEDIA QUERIES FOR CHARITY*/
+/*Media queries are to fix the paddings on different screen sizes;
+ since I wanted everything to be around the middle.*/
+ @media screen and (max-width: 1200px) {
+     .container3{
+         padding-left: 40px;
+         padding-right: 40px;
+    }
+     .container5 {
+         margin-top: 45px;
+    }
+     .column2 p {
+         font-size: 18px ;
+         line-height: 16px;
+    }
+}
+ @media screen and (max-width: 1024px) {
+     .container3{
+         padding-left: 40px;
+         padding-right: 40px;
+    }
+     .container5 {
+         margin-top: 45px;
+    }
+     .column2 p {
+         font-size: 20px;
+         line-height: 16px 
+    }
+}
+ @media screen and (max-width: 900px) {
+     .container3{
+         padding-left: 40px;
+         padding-right: 40px;
+    }
+     .container5 {
+         margin-top: 45px;
+    }
+     .column2 p {
+         font-size: 16px;
+         line-height: 14px;
+    }
+}
+/*I wanted my mobile and tablet preview to be different to the computer screen previews;
+ therefore instead of having an image background, I opted for a plain solid pink background for the grids instead;
+ this was to make it easier to read on smaller devices. I wanted the grids to stack on top of each other hence why I gave the column2 a margin;
+ this allows all of the grids to fall on top of each other. Their width changes from 50% to 100% so they can cover the container width.*/
+ @media screen and (max-width: 768px) {
+     .charitycontainer{
+         padding-left: 30px;
+         padding-right: 30px;
+    }
+     .container3 {
+         padding-left: 30px;
+         padding-right: 30px;
+    }
+     .container5 {
+         margin-top: 40px;
+    }
+     .column2 {
+         margin: 0px;
+         width: 100%;
+         height: 400px;
+    }
+     .container5 h1 {
+         font-size: 45px;
+    }
+     .container5 h2 {
+         font-size: 45px;
+         border: none;
+    }
+     .container5 h3 {
+         font-size: 40px;
+    }
+     .container5 p {
+         font-size: 16px;
+    }
+     .column2 {
+         padding: 5px;
+         height: 240px;
+         background: pink;
+    }
+     .column2 h2 {
+         font-size: 20px;
+         color: black;
+    }
+     .column2 p {
+         font-size: 14px;
+         line-height: 18px;
+         color: black;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .charitycontainer{
+         padding-left: 0px !important;
+         padding-right: 0px !important;
+    }
+     .container3{
+         padding-left: 20px;
+         padding-right: 20px;
+    }
+     .container5 {
+         margin-top: 30px;
+    }
+     .container5 h1{
+         line-height: 40px;
+         font-size: 26px!important;
+    }
+     .container5 h2 {
+         font-size: 24px;
+    }
+     .container5 h3 {
+         font-size: 22px;
+    }
+     .container5 h4 {
+         font-size: 16px;
+    }
+     .container5 p {
+         font-size: 12px;
+    }
+     .column2 {
+         padding: 5px;
+         height: 230px;
+    }
+     .column2 h2 {
+         font-size: 18px;
+    }
+     .column2 p {
+         font-size: 14px;
+    }
+}
+ @media screen and (max-width: 375px) {
+     .charitycontainer{
+         padding-left: 0px;
+         padding-right: 0px;
+    }
+     .container3 {
+         padding-left: 5px;
+         padding-right: 5px;
+    }
+     .container5 {
+         margin-top: 20px;
+         padding-left: 30px;
+         padding-right: 30px;
+         padding-top: 5px;
+         padding-bottom: 10px;
+    }
+     .container5 h1 {
+         line-height: 20px;
+         font-size: 22px !important;
+    }
+     .container5 h2 {
+         line-height: 60px;
+         font-size: 20px!important;
+    }
+     .container5 h3 {
+         line-height: 60px;
+         font-size: 18px;
+    }
+     .container5 h4 {
+         font-size: 12px;
+    }
+     .container5 p {
+         font-size: 10px;
+    }
+     .column2 {
+         padding: 0px;
+         height: 200px;
+    }
+     .column2 h2 {
+         font-size: 14px;
+    }
+}
+/*END OF CHARITY PAGE CSS*/
+/*INDEX PAGE CSS*/
+/*TOP PART AND BOX*/
+/*This container is used multiple times to allow all the content to have same padding left and right.*/
+ .container {
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 70px;
+     padding-right: 70px;
+}
+/*This is for the welcome box right at the top. I have given it padding on the left and right*/
+ .indexintrointro{
+     margin-top: 50px;
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 100px;
+     padding-right: 100px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     background: rgba(255,55,100,0.5);
+}
+/*This is for the styling of the header in the introduction welcome paragraph*/
+ .indexintrointro h1{
+     font-size: 50px;
+     font-family: 'chivo-black';
+     text-align: center;
+     text-shadow: 1px 1px 1px pink;
+     border-bottom : solid 1px black;
+}
+/*Styling for the paragraph within top welcome "intro" box*/
+ .indexintrointro p{
+     font-size: 18px;
+     font-family: 'chivo-regular';
+}
+/*MEDIA QUERIES FOR TOP BOX*/
+/*These queries only change the paddings and font-size appropriately to suit the device being used.*/
+ @media screen and (max-width: 1440px) {
+     .container {
+         padding-left: 30px;
+         padding-right: 30px;
+    }
+     .indexintrointro{
+         padding-left: 70px;
+         padding-right: 70px;
+    }
+}
+ @media screen and (max-width: 768px) {
+     .container {
+         padding-left: 30px;
+         padding-right: 30px;
+    }
+     .indexintrointro{
+         padding-left: 70px;
+         padding-right: 70px;
+    }
+     .indexintrointro h1{
+         font-size: 30px;
+    }
+     .indexintrointro p{
+         font-size: 16px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .container {
+         padding-left: 10px;
+         padding-right: 10px;
+    }
+     .indexintrointro{
+         padding-left: 25px;
+         padding-right: 25px;
+    }
+     .indexintrointro h1{
+         font-size: 20px;
+    }
+     .indexintrointro p{
+         font-size: 14px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .container {
+         padding-left: 5px;
+         padding-right: 5px;
+    }
+     .indexintrointro{
+         padding-left: 5px;
+         padding-right: 5px;
+    }
+     .indexintrointro h1{
+         font-size: 18px;
+    }
+     .indexintrointro p{
+         font-size: 12px;
+    }
+}
+/*INDEX PAGE CUT-OUT BOLD IMAGE*/
+/*I wanted the image to be slightly towards the right and away from left so I gave it a bit of padding */
+ .bigimage{
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 30px;
+}
+/*Before I was using the actual height of 1493px and actual width of 1400px for the image but then I changed it to "max-width of 100% and height that is auto;
+ this means that even without media queries, the image can resize itself on its own;
+ however this means the image will not always be in its best quality;
+ to overcome this issue, I used media queries that make sure that the image is a certain height and width on standard screen sizes*/
+ .indeximage{
+     position: absolute;
+     max-width: 100%;
+     height: auto;
+}
+/*MEDIA QUERIES FOR CUT OUT BOLD IMAGE*/
+/*I used media queries that make sure that the image is a certain height and width on standard screen sizes;
+ this is so that the image quality is great in nearly most scenarios.*/
+ @media screen and (max-width: 1440px) {
+     .bigimage{
+         padding-left: 10px;
+    }
+     .indeximage{
+         height: 1280px;
+         width: 1200px;
+    }
+}
+ @media screen and (max-width: 1024px) {
+     .bigimage{
+         padding-left: 10px;
+    }
+     .indeximage{
+         height: 960px;
+         width: 900px;
+    }
+}
+ @media screen and (max-width: 768px) {
+     .bigimage{
+         padding-left: 5px;
+    }
+     .indeximage{
+         height: 746px;
+         width: 700px;
+    }
+}
+ @media screen and (max-width: 650px) {
+     .bigimage{
+         padding-left: 5px;
+    }
+     .indeximage{
+         height: 533px;
+         width: 500px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .bigimage{
+         padding-left: 0px;
+    }
+     .indeximage{
+         height: 426px;
+         width: 400px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .bigimage{
+         padding-left: 0px;
+    }
+     .indeximage{
+         height: 320px;
+         width: 300px;
+    }
+}
+/*END OF INDEX PAGE CUT-OUT BOLD IMAGE*/
+/*This is for another column that is above the image however the image has been positioned to sit on top of it. It has a background colour of that is white with opacity.*/
+ .column {
+     box-sizing: border-box;
+     float: left;
+     width: 100%;
+     padding: 10px;
+     height: 500px;
+     background: rgba(255,255,255,0.5);
+     text-align: justify;
+}
+/*This is used to move my typography columndown slightly and give it a margin at the top and left*/
+ .columndown{
+     margin: auto;
+     margin-top: 90px;
+     margin-left: 10px;
+}
+/*This is for the black bold typography that is on top of the image.*/
+ .column h2 {
+     font-size: 100px;
+     line-height: 2px;
+     position: relative;
+     min-height:10px;
+     color: black;
+     font-family: 'butlerblackstencil';
+     text-shadow: 2px 2px 1px pink;
+     overflow: visible;
+}
+/*When you hover over it, it skews slightly, since some of the text is in italics, it will skew the other way, making a nice wavy effect.*/
+ .column h2:hover {
+     transform: skew(10deg);
+}
+/*This is for the light pink typography in the middle to bottom of the middle section of the page. I went for a large font size and plenthy of padding at the top of move it down to the desired location. I opted for a light pink colour rather than black.*/
+ .column h3 {
+     font-size: 100px;
+     line-height: 2px;
+     padding-top: 600px;
+     margin-left: 100px;
+     position: relative;
+     min-height:10px;
+     color: pink;
+     text-shadow: 1px 1px 1px black;
+     font-family: 'butlerblack';
+}
+/*MEDIA QUERIES FOR INDEX CSS*/
+/*This was the most lenghty of all my media queries due to me using a large image and trying to be more different with the way I have designed my website. I have adjusted the columns accordingly to ensure that a similarish effect appears no matter what the screen width.*/
+ @media screen and (max-width: 1500px) {
+     .column{
+         padding: 10px;
+         height: 450px;
+    }
+     .columndown{
+         margin-top: 70px;
+         margin-left: 10px;
+    }
+     .column h2 {
+         font-size: 70px;
+         min-height:12px;
+    }
+     .column h3 {
+         font-size: 70px;
+         padding-top: 500px;
+         margin-left: 80px 
+    }
+}
+ @media screen and (max-width: 1024px) {
+     .column{
+         padding: 10px;
+         height: 450px;
+    }
+     .columndown{
+         margin-top: 70px;
+         margin-left: 10px;
+    }
+     .column h2 {
+         font-size: 50px;
+         min-height:12px;
+    }
+     .column h3 {
+         font-size: 55px;
+         padding-top: 500px;
+         margin-left: 80px 
+    }
+}
+ @media screen and (max-width: 850px) {
+     .column{
+         padding: 10px;
+         height: 400px;
+    }
+     .columndown{
+         margin-top: 60px;
+         margin-left: 10px;
+    }
+     .column h2 {
+         font-size: 50px;
+         min-height:11px;
+    }
+     .column h3 {
+         font-size:35px;
+         padding-top: 400px;
+         margin-left: 60px 
+    }
+}
+ @media screen and (max-width: 770px) {
+     .column{
+         padding: 8px;
+         height: 350px;
+    }
+     .columndown{
+         margin-top: 60px;
+         margin-left: 10px;
+    }
+     .column h2 {
+         font-size: 45px;
+         min-height:11px;
+    }
+     .column h3 {
+         font-size:30px;
+         padding-top: 400px;
+         margin-left: 60px 
+    }
+}
+ @media screen and (max-width: 600px) {
+     .column{
+         padding: 5px;
+         height: 180px;
+    }
+     .columndown{
+         margin-top: 20px;
+         margin-left: 5px;
+    }
+     .column h2 {
+         font-size: 20px;
+         min-height:10px;
+    }
+     .column h3 {
+         font-size:25px;
+         padding-top: 200px;
+         margin-left: 20px 
+    }
+}
+ @media screen and (max-width: 500px) {
+     .column{
+         padding: 2px;
+         height: 150px;
+    }
+     .columndown {
+         margin-top: 20px;
+         margin-left: 5px;
+    }
+     .column h2 {
+         font-size: 18px;
+         min-height:8px;
+    }
+     .column h3 {
+         font-size:18px;
+         padding-top: 150px;
+         margin-left: 20px 
+    }
+}
+/*END OF TOP INDEX PAGE PART*/
+/*MIDDLE OF PAGE FOR BLUR TEXT EFFECT*/
+/*For the typography behind the image;
+ before this space was empty so I decided to fill it with some blurred text that you can't read. The colour of the font is transparent and it has a soft text shadow applied to it so that you cannot read it.*/
+ .container2 {
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 50px;
+     padding-right: 50px;
+     background: rgba(255,55,100,0.5);
+     color: transparent;
+     text-shadow: 0 0 3px rgba(0,0,0,0.5);
+     font-size: 20px;
+     font-family: 'butler_light';
+}
+/*MEDIA QUERIES FOR BLURRED TEXT*/
+/*Changes to its paddings and its font size as the screen widths change.*/
+ @media screen and (max-width: 1024px) {
+     .container2 {
+         padding-left: 45px;
+         padding-right: 50px;
+         font-size: 16px;
+    }
+}
+ @media screen and (max-width: 850px) {
+     .container2 {
+         padding-left: 30px;
+         padding-right: 30px;
+         font-size: 12px;
+    }
+}
+ @media screen and (max-width: 768px) {
+     .container2 {
+         padding-left: 30px;
+         padding-right: 28px;
+         font-size: 11px;
+    }
+}
+ @media screen and (max-width: 650px) {
+     .container2 {
+         padding-left: 30px;
+         padding-right: 28px;
+         font-size: 9px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .container2 {
+         padding-left: 20px;
+         padding-right: 20px;
+         font-size: 6px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .container2 {
+         padding-left: 5px;
+         padding-right: 5px;
+         font-size: 4px;
+    }
+}
+/*END OF MIDDLE INDEX PAGE PART*/
+/*BOTTOM OF INDEX PAGE BOX*/
+/*Stlying of the box at the bottom, I have given the "header" perspective part a text shadow and black chivo font (not a bold one);
+ this extra weight helps to add to the arty fashion theme I was going for. I gave it a border at the top to somewhat finish the page with my own words. */
+ .indexperspective{
+     font-size: 50px;
+     font-family: 'chivo-black';
+     text-shadow: 1px 1px 1px pink;
+     border-top : solid 1px black;
+}
+/*I have given the opening paragraph a little indent of 50px to the right for styling purposes. I adjusted the line height of this paragraph and the font size. The font family I opted was part of Chivo but it is a lighter font weight (regular font)*/
+ .indexopening {
+     text-indent: 50px;
+     padding: 10px;
+     margin: 15px;
+     text-align: justify;
+     line-height: 30px;
+     font-size: 30px;
+     font-family: 'chivo-regular';
+}
+/*I used container4 to give it a background and also fits well into the container-like design with same width as the containers above. I gave it a padding at the bottom to ensure that more of the pink shows on the divider shows at the bottom of the page. I have a margin just to keep it well away from footer and if I plan to add anything else to this page. */
+ .container4 {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 50px;
+     padding-right: 50px;
+     margin-top: 50px;
+     margin-bottom: 10px;
+     background: rgba(255,55,100,0.6);
+}
+/*MEDIA QUERIES FOR PERSPECTIVE*/
+/*This ensure that the font size and paddings are changing as the screen width is changing.*/
+ @media screen and (max-width: 1024px) {
+     .indexperspective{
+         font-size: 50px;
+    }
+     .indexopening {
+         text-indent: 50px;
+         padding: 10px;
+         margin: 15px;
+         font-size: 30px;
+    }
+     .container4 {
+         padding-top: 10px;
+         padding-left: 50px;
+         padding-right: 50px;
+         margin-top: 50px;
+         margin-bottom: 10px;
+    }
+}
+ @media screen and (max-width: 768px) {
+     .indexperspective{
+         font-size: 30px;
+    }
+     .indexopening {
+         padding: 10px;
+         margin: 15px;
+         font-size: 30px;
+    }
+     .container4 {
+         padding-top: 10px;
+         padding-left: 50px;
+         padding-right: 50px;
+         margin-top: 50px;
+         margin-bottom: 10px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .indexperspective{
+         font-size: 20px;
+    }
+     .indexopening {
+         padding: 8px;
+         margin: 10px;
+         font-size: 12px;
+         line-height: 20px;
+    }
+     .container4 {
+         padding-top: 8px;
+         padding-left:20px;
+         padding-right: 20px;
+         margin-top: 10px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .indexperspective{
+         font-size: 18px;
+    }
+     .indexopening {
+         padding: 5px;
+         margin: 5px;
+         font-size: 10px;
+         line-height: 12px;
+    }
+     .container4 {
+         padding-top: 5px;
+         padding-left:10px;
+         padding-right: 10px;
+         margin-top: 5px;
+    }
+}
+/*END OF INDEX PAGE BOTTOM PART*/
+/*START OF FOOTER*/
+/*The container that the footer is within;
+ this has a background colour of white like the header*/
+ .footercontainer{
+     background-color: white;
+}
+/*copyright "Mizna" part font size and styling;
+ I gave it a pink text shadow as well */
+ .copyright{
+     font-size: 28px;
+     text-align: center;
+     font-family: 'chivo-bold';
+     color: black;
+     text-shadow: 1px 1px 1px #f990a7;
+}
+/*Padding added so that the footer links so that they are not so close together to towards the bottom of the page;
+ container is aligned in the center and has a plain regular chivo font style.*/
+ .footerlinkscontainer{
+     padding: 5px;
+     padding-bottom: 20px;
+     margin: 5px;
+     text-align: center;
+     font-family: 'chivo-regular';
+}
+/*Added some paddings to the footer links to ensure some equal width space between them. Gave this some styling with colour and fonts;
+ I added a very light coloured thin text shadow.*/
+ .footerlinks{
+     padding: 10px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #f7309c;
+     text-shadow: 1px 1px 1px #ffc0cb;
+     line-height: 5px;
+}
+/*When you hover over the footer links, they turn black smoothly*/
+ .footerlinks:hover{
+     color: black;
+     transition: 0.6s;
+}
+/*MEDIA QUERIES FOR FOOTER*/
+/*Simple media queries that adjust the font size according to width of screen.*/
+ @media screen and (max-width: 1024px) {
+     .copyright{
+         font-size: 24px;
+    }
+}
+ @media screen and (max-width: 768px) {
+     .copyright{
+         font-size: 22px;
+    }
+}
+ @media screen and (max-width: 426px) {
+     .copyright{
+         font-size: 18px;
+    }
+     .footerlinks{
+         font-size: 14px;
+    }
+}
+ @media screen and (max-width: 376px) {
+     .copyright{
+         font-size: 14px;
+    }
+     .footerlinks{
+         font-size: 12px;
+    }
+}
+/*END OF FOOTER CSS*/
+/*BASIC REPORT STYLING*/
+ .reportcontain{
+     background-color: pink;
+    /* max-width: 1600px;
+     */
+     padding-left: 10px;
+     padding-right: 10px;
+}
+ .reportstandard{
+     max-width: 1600px;
+     background-color: pink;
+     margin-left: 80px;
+     margin-right: 80px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+}
+ .report1{
+     border-bottom: 1px solid black;
+}
+ .report1 h1{
+     color: black;
+     font-family: 'butlerblack';
+}
+ .report1 h2{
+     color: black;
+     font-family: 'chivo-black';
+}
+ .report1 h3{
+     color: black;
+     font-family: 'chivo-bold';
+}
+ .report1 h4{
+     color: black;
+     font-family: 'chivo-bold';
+}
+ .report1 p{
+     color: black;
+     font-family: 'chivo-regular';
+}
+/*END OF BASIC REPORT STYLING*/

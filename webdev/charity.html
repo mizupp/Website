@@ -1,0 +1,381 @@
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mizna portfolio">
+	<meta name="keywords" content="Mizna,Portfolio,Art">
+	<meta name="author" content="Mizna Uppal">
+
+		<title>Mizna Uppal</title>
+ <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">       
+        
+      
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/fading.js"></script>
+		
+<link id="lightstyle" rel="stylesheet" type="text/css" href="css/mainstyle.css">
+<link id="darkstyle" rel="stylesheet" type="text/css" href="css/mainstyle.css">	
+<link rel="stylesheet" type="text/css" href="css/art.css" />
+       
+   </head>
+
+
+<body>
+
+<!--		HEADER OF PAGE -->
+<div class="top">
+<!-- NAVIGATION (SIDE MENU) -->
+<div class = "menu">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+	<a href="index.html">Splash Page</a>
+	<a href="index2.html">Home</a>
+    <a href="art.html">Art</a>	
+	<a href="charity.html">Charity</a>
+	<a href="chapters.html">Chapters</a>
+	</div>
+</div>
+<!--	TO OPEN SIDE MENU	-->
+<span class ="navopen" onclick="openNav()">&#9776; </span>
+	</div>
+	
+<!--"NAME" WHICH IS LINKED TO HOMEPAGE (CURRENT PAGE)-->
+  <div class="bar" id="myNavigationbar">
+<div class="indexdropdown">
+  <button class="indexdropbtn">MIZNA UPPAL</button>
+  <div class="indexdropdown-content">
+    <a onclick="lightDarkSheet('css/mainstyle.css')" class ="lightdark"><img src="images/lightbulb.png" alt="light" height="50px" width="50px"> LIGHT </a>
+    <a onclick="lightDarkSheet('css/dark.css')" class ="lightdark"><img src="images/darkbulb.png" alt="dark" height="50px" width="50px">DARK</a>
+  </div>
+</div>	
+</div>
+</div>
+<!--END OF HEADER	-->
+		
+<!--The "box-wrap-charity" class on this div gives the the whole page a background image that has a max-width of 1600px which is quite similar to the homepage. The fadingmiznapages class is for the fading.js code; it allows a fade into the page. -->
+<div class="box-wrap-charity fadingmiznapages">
+<!--This div has the class down, I used this on my home page as well; it gives the content a little bit of padding left, right and a little of the top.				-->
+	<div class = "down">
+<!--This div contain-->
+		<div class="charitycontainer">
+<!--I have included this div to contain the top "charity and inter-faith project parts; this "container3" has been styled to give padding on the left and right adjust cotents slightly-->
+			<div class = "container3">
+<!--This div contains the header which is at the top of the page; this container is used again for its style at the bottom as well.-->
+				<div class = "container5">
+					<h1>Charity and Faith</h1>
+				</div>
+<!--I added this to keep 2 charity columns into one div container.I went for a responsive grid box method to set out my table; this was through the use of columns. Each column would be 50% in width which can be benefical when wanting responsiveness since the columns can stack on top of each other.	-->
+	<div class = "charitycolumns">
+<!--This div contains the a header and the paragraph; these were all styled on the external stylesheet-->
+<!--column2 has a background of its own. I wanted to change things up a little so I went for a dark image and worked with white font color. When you reduce the page width, after the columns stack, the background turns pink and the font colour turns black; this is so that it is easier to read on smaller devices.-->
+		<div class="column2">
+<!--Within with the header I decided to add an image. I went for inline styling because it is easy to fix the height and width here rather than do it for each image seperately. Nearly all the images required different widths and heights so this was a more suitable decision.-->
+			<h2>Poppy appeal <img src="images/poppy.png" alt="smallimg" height="50" width="50"> </h2>
+			<p>Raised money for poppy appeal and have done public speaking events within mosque community on the importance of Poppy Appeal and Remembrance Day.</p>
+	</div>
+<!--END OF FIRST COLUMN2-->
+
+<!--A new column; this will be stacked next to the column above. It contains the header and the paragraph-->
+	<div class="column2">
+<!--Within with the header I decided to add an image. I went for inline styling because it is easy to fix the height and width here rather than do it for each image seperately. Nearly all the images required different widths and heights so this was a more suitable decision.-->
+			<h2>Prostate cancer  <img src="images/prostate.png" alt="smallimg" height="50" width="100"> </h2>
+			<p>Held and helped out with cupcake sales to raise money for men with prostate cancer; along with this I spoke to students to raise awareness regarding this cancer and encourage them to ask their male relatives to go for check-ups.</p>
+	</div>
+<!--END OF SECOND COLUMN2-->
+</div>
+<!--END OF CHARITYCOLUMNS	-->
+				
+<!--We are now continuing with our second set of charitycolumns; this is exactly the same as the one above and will be placed below the first two stacks to give a table like effect.				-->
+	<div class = "charitycolumns"> 	
+<!--This div contains the a header and the paragraph; these were all styled on the external stylesheet-->
+		<div class="column2">
+<!--Within with the header I decided to add an image. I went for inline styling because it is easy to fix the height and width here rather than do it for each image seperately. Nearly all the images required different widths and heights so this was a more suitable decision.-->
+			<h2>Charity walks  <img src="images/humanityfirst.png" alt="smallimg" height="70" width="60"></h2>
+			<p>Taken part in various charity walks to raise awareness and money.</p>
+	</div>
+<!--END OF FIRST COLUMN2-->
+
+<!--A new column; this will be stacked next to the column above. It contains the header and the paragraph-->
+	<div class="column2">
+<!--This div contains the a header and the paragraph; these were all styled on the external stylesheet-->		
+		<h2>Macmillan cancer raise <img src="images/macmillan.jpg" alt="smallimg" height="30" width="70"></h2>
+		<p>Donated and helped out at coffee mornings to raise money for Macmillan; organised groups of women to attend these coffee mornings to strengthen local community knowledge on cancer. </p>
+	</div>
+<!--END OF SECOND COLUMN2-->
+</div>	
+<!--END OF CHARITYCOLUMNS	-->
+		
+
+<!--We are now continuing with our third set of charitycolumns; this is exactly the same as the one above and will be placed below the first of couple of stacks to give a table like effect; this would be responsive when the page width changes				-->
+	<div class = "charitycolumns"> 		
+<!--This div contains the a header and the paragraph; these were all styled on the external stylesheet-->
+		<div class="column2">
+<!--Within with the header I decided to add an image. I went for inline styling because it is easy to fix the height and width here rather than do it for each image seperately. Nearly all the images required different widths and heights so this was a more suitable decision.-->
+			<h2>Part time volunteering at Ronald Gibson house <img src="images/brendoncare.png" alt="smallimg" height="30" width="60"></h2>
+			<p>I have volunteered part-time at Ronald Gibson house to look after elderly people suffering dementia. I was able to take many skills from volunteering.</p>
+	</div>
+<!--END OF FIRST COLUMN2-->
+		
+<!--A new column; this will be stacked next to the column above. It contains the header and the paragraph-->		
+	<div class="column2">
+<!--Within with the header I decided to add an image. I went for inline styling because it is easy to fix the height and width here rather than do it for each image seperately. Nearly all the images required different widths and heights so this was a more suitable decision.-->
+		<h2>Volunteering at other care homes</h2>
+		<p>For the past 6 years, I have visited various elderly care homes to help with wrapping Christmas presents and helped out at small Christmas parties. Along with this, Christmas presents are donated to people in hospitals, by hand, every year (and some care homes that allow it).</p>
+	</div>
+<!--END OF SECOND COLUMN2-->
+</div>	
+<!--END OF CHARITYCOLUMNS	-->
+
+	
+<!--We are now continuing with our fourth and last set of charitycolumns; this is exactly the same as the one above and will be placed below the first of couple of stacks to give a table like effect; this would be responsive when the page width changes				-->
+	<div class = "charitycolumns"> 
+<!--This div contains the a header and the paragraph; these were all styled on the external stylesheet-->
+		<div class="column2">
+<!--Within with the header I decided to add an image. I went for inline styling because it is easy to fix the height and width here rather than do it for each image seperately. Nearly all the images required different widths and heights so this was a more suitable decision.-->
+			<h2>Work with disabled children <img src="images/janesignature.png" alt="smallimg" height="50" width="100"></h2>
+			<p>I worked on a small project regarding attitudes to disabilities and tried to raise awareness locally. The project’s aim was to promote equality regardless of disability; I was provided a response by my previous local MP, Jane Ellison.  </p>
+			</div>
+<!--END OF FIRST COLUMN2-->
+
+<!--A new column; this will be stacked next to the column above. It contains the header and the paragraph-->
+	<div class="column2">
+<!--Within with the header I decided to add an image. I went for inline styling because it is easy to fix the height and width here rather than do it for each image seperately. Nearly all the images required different widths and heights so this was a more suitable decision.-->
+		<h2>Homeless people and food banks</h2>
+		<p>I worked with neighbours and others in my area, to provide hampers and gifts at homeless shelters, in particular for women. Along with this, I have helped with collection of food within local community that was taken to food bank; we encourage donating some every year.</p>
+		</div>
+<!--END OF SECOND COLUMN2-->
+	</div>
+<!--END OF CHARITYCOLUMNS	-->
+<!--This grid table is now complete. This changes as the page width changes; it has been styled so after a certain point the grid columns stacks on top of each other. I done this by giving it a margin of 0px after it reaches a max screen width of 768px; this will stop letting "column2" float to the left.				-->
+	
+
+<!--This div contains the the seperate cards that are towards the bottom of the page; it will have a pink background with low opacity so it looks darker on the actual pink background.-->
+	<div class = "charitycontainer4">
+<!--A seperator I used to fix the problem of overlapping text onto the columns grid.		-->
+			<div class ="charityseperate">
+<!--This div's class has been used before at the top; I am using it again to keep the same style as above. This div contains the header and paragraph which has been styled appropriately.	-->
+				<div class = "container5">
+<!--This header is different to the header that is being used at the top with container5 class; I wanted this header to be slightly smaller-->
+					<h2>Inter-faith projects</h2>
+<!--Text has been put into paragraph element; this has further been styled with "Chivo-regular" font.-->
+						<p>Living in the UK allows us to interact with people of different cultures and faiths; I believe it is important to reach out to as many communities as possible. Helping out at different occasions has provided me with more connections to whom I can reach out to when I also need help.  One of the biggest benefits of these small contributions is the time spent with other people; each person has their own life, own story and they all want someone to hear it.</p>
+				</div>
+<!--END OF CONTAINER5-->
+		
+<!--This div's class has been used before at the top; I am using it again to keep the same style as above. This div contains the header and paragraph which has been styled appropriately.	-->
+		<div class = "container5">
+<!--This header is different to the header that is being used right at the top with container5 class and the one that is being used above this div; I wanted this header to be slightly smaller than the rest-->
+					<h3>Church activities</h3>
+<!--Text has been put into paragraph element; this has further been styled with "Chivo-regular" font.-->
+					<p>Helping out when I can with small tasks as well as actively take part in coffee mornings at Lawrence Church. Most recently, I helped out with making cards during an arts and craft session; I was able to learn different skills from the older women and develop some new techniques of my own. </p>
+				</div>
+<!--This div's class has been used before; I am using it again to keep the same style as above. This div contains the header and paragraph which has been styled appropriately.	-->
+					<div class = "container5">
+<!--This header is the same as the one above this div.-->
+						<h3>Gurdwara visits</h3>
+<!--Text has been put into paragraph element; this has further been styled with "Chivo-regular" font.-->
+						<p>I have had the luxury of visiting many gurdwaras in my lifetime; from a young age, my mother wanted to me to get to know as many different religions as possible and with majority of her friends being Sikh, it was more of an obligation. Recently, I visited two gurdwaras through my own decision; the whole experience was a blessing; everyone was extremely friendly and I even got to have a chat with the women who help out there whilst the other women cooked. The purpose of the visit was to make connections with the gurdwara with my local mosque to make it accessible for everyone to attend exciting events at either location..</p>
+					</div>
+<!--END OF CONTAINER5-->
+					</div>
+<!--END OF CHARITY SEPERATE-->
+				</div>
+<!--END OF CONTAINER4-->
+			</div>
+<!--END OF CONTAINER3-->
+
+			
+<!--Little slideshow gallery section-->
+<!--This div contains the class "charitygallery"; I wanted the container to have a bit of padding at the bottom to show more of the pink but didn't want to change my "container5" css styling since that would affect all the divs that are using this class so I put another div around my container5 and gave that div the padding-bottom styling.-->
+	<div class = "charitygallery">
+<!--container5 class being used on this div to make sure that it is meeting the width that I want and so that the layout looks consistent.-->
+		<div class = "container5">
+<!--I went for the smaller header which has been used before-->
+			<h3>Gallery</h3>
+<!--I created an even smaller header for this little slideshow section-->
+				<h4>Includes community work and personal photography</h4>
+<!--This container is being used on my artpage aswell; I decided to make use of it to add some images onto my charity/faith page. This div keeps the entire slideshow divs together; the class artcontainer gives a pink background and positioning of relative. -->
+					<div class="artcontainer">
+<!--This div is to give slides a display of none; this keeps them hidden by default-->
+						<div class="mySlides">
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+							<img src="images/charitytwo.png" alt="imgbig" style="width:100%">
+						</div>
+<!--END OF FIRST SLIDE-->
+	
+<!--second slide; this div keeps the image within and gives it a display of none on the stylesheet-->
+						<div class="mySlides">
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+							<img src="images/charityone.png" alt="imgbig" style="width:100%">
+						</div>
+<!--END OF SECOND SLIDE-->
+
+<!--third slide; this div keeps the image within and gives it a display of none on the stylesheet-->
+						<div class="mySlides">
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+							<img src="images/charity.png" alt="imgbig" style="width:100%">
+						</div>
+<!--END OF THIRD SLIDE-->
+
+	
+<!--fourth slide; this div keeps the image within and gives it a display of none on the stylesheet-->
+						<div class="mySlides">
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+							<img src="images/charitythree.png" alt="imgbig" style="width:100%">
+						</div>
+<!--END OF FOURTH SLIDE-->
+
+		
+<!--fifth slide; this div keeps the image within and gives it a display of none on the stylesheet-->
+						<div class="mySlides">
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+							<img src="images/charityfour.png" alt="imgbig" style="width:100%">
+						</div>
+<!--END OF FIFTH SLIDE-->
+	
+<!--sixth slide; this div keeps the image within and gives it a display of none on the stylesheet-->
+						<div class="mySlides">
+<!--The image that I want shown has been added within, It has a inline of width: 100% so the entire image is shown.-->
+							<img src="images/charityfive.png" alt="imgbig" style="width:100%">
+						</div>
+<!--END OF SIXTH SLIDE-->
+ 
+<!--Links that appear on the slideshow, these allow us to toggle between the images. When you click on them, they execute the script which is written at the bottom of the page		-->
+	  <a class="prev" onclick="plusSlides(-1)">❮</a>
+	  <a class="next" onclick="plusSlides(1)">❯</a>
+<!--End of links part						-->
+					
+						 </div>
+<!--END OF ARTCONTAINER-->
+					</div>
+<!--END OF CONTAINER5-->
+				</div>
+<!--END OF CHARITYGALLERY-->
+			</div>
+<!--END OF CHARITYCONTAINER-->
+		</div>	
+<!--END OF DOWN-->
+	</div>
+<!--END OF BOX-WRAP CHARITY-->
+
+<!-- The following script is using standard javascript. 
+
+document.getElementById("myNav").style.width = "100%";
+
+At the top when we click on the "span link" (which is the navbar), it activates this script. The script then tries to find where the "myNav" id is being used. It applies the styles of classes with the div of this id, 100% fully across the page.
+	
+document.getElementById("myNav").style.width = "0%";
+
+When the navbar is open, we need to close it as well; there is a little cross at the top of the page. When you click it, it brings the style to 0% width therefore we no longer see it on the page.
+
+-->	
+<script type="text/javascript">
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+	
+<!--The following script is using standard javascript.
+
+It is used when I want the user to be able to use a light or dark stylesheet.
+   
+<a onclick="lightDarkSheet('css/main2.css')" class ="lightdark"></a>
+
+At the top we have put what style sheet we want when we click on the button. This code gets the stylesheet for us so that it can be applied. For the example given, on clicking this link, we would be using the function "lightDarkSheet" to get the stylesheet that we want.
+
+-->
+	<script type="text/javascript">
+	function lightDarkSheet(sheet){
+	document.getElementById('lightstyle').setAttribute('href', sheet);
+	document.getElementById('darkstyle').setAttribute('href', sheet);
+	}
+	</script>
+
+<!--This script is written in js.
+
+We getting the elements that have the class of "mySlides" within the html code and then making it into our variable of "slides". The "dots" are the little preview image thumbnail buttons at the bottom of the slideshow.
+
+The original code had "captionTexts" as well which were supposed to be at the bottom of the slideshow; these were also linked the "alt" of the images however I got rid of that since I didn't need it for my code. Instead I made my own caption divs and put those onto the slideshow rather than having them under the slideshow.
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+
+This code is to make sure that the images show up in the slideshow since without it, the images would appear enlarged underneath the slideshow container.
+
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+There is a for loop which iterates through the length of dots; this is to make sure that after the little thumbnails have been clicked, they return back to their style from their class.
+
+
+
+The slides style is blocked when slidesIndex is no longer one and if that is the case then the dots become "active"; allowing the event to be triggered; so now we will be able to see the images.
+-->
+	
+<script type="text/javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+	
+  var dots = document.getElementsByClassName("artdemo");
+	
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+		
+</script>
+	
+</body>
+	
+<footer>
+<!--Container for the footer; keeps the footer together so I can style the entire footer-->
+	<div class = "footercontainer">
+<!--div for copyright; is styled seperately to the div below within the same container-->
+  <div class="copyright">
+    <p>Mizna Uppal © 2017</p>
+  </div>
+<!--END OF COPYRIGHT DIV-->
+<!--This container div contains all the link placed in the footer bar-->
+  <div class="footerlinkscontainer">
+		<a href="index.html" class = "footerlinks">SplashPage</a>
+		<a href="index2.html" class = "footerlinks">Home</a>
+		<a href="art.html" class = "footerlinks">Art</a>
+		<a href="chapters.html" class = "footerlinks">Chapters</a>
+	  	<a href="charity.html" class = "footerlinks">Charity</a>
+  </div>
+<!--END OF FOOTERLINKSCONTAINER-->
+		</div>
+<!--END OF FOOTERCONTAINER-->
+</footer>
+<!--END OF FOOTER-->
+	
+		
+</html>
